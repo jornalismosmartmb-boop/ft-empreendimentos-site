@@ -33,18 +33,18 @@ export function CTASection() {
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row justify-center gap-6 text-sm">
             <a
-              href="tel:+5571991898703"
+              href="tel:+5571329000000"
               className="flex items-center justify-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>(71) 99189-8703</span>
+              <span>(71) 3290-XXXX</span>
             </a>
             <a
-              href="mailto:publicitedson@gmail.com"
+              href="mailto:contato@modo2.com.br"
               className="flex items-center justify-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
             >
               <Mail className="w-4 h-4" />
-              <span>publicitedson@gmail.com</span>
+              <span>contato@modo2.com.br</span>
             </a>
           </div>
         </div>

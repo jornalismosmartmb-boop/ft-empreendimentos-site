@@ -102,7 +102,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
-            <p>© 2025 FT Empreendimentos LTDA. Todos os direitos reservados.</p>
+            <div className="flex flex-col items-center md:items-start gap-1">
+              <p>© 2025 FT Empreendimentos LTDA. Todos os direitos reservados.</p>
+              <p className="text-xs text-accent">Identité é um produto de FT Empreendimentos LTDA</p>
+            </div>
             <p className="text-xs">CNPJ: 07.757.581/0001-50</p>
           </div>
         </div>

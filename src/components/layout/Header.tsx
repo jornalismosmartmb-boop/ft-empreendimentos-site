@@ -29,8 +29,8 @@ export function Header() {
               <h1 className="font-display font-bold text-lg text-foreground leading-tight">
                 Modo 2 Producoes
               </h1>
-              <p className="text-xs text-muted-foreground tracking-wide">
-                Produção de Eventos
+              <p className="text-xs text-accent font-medium tracking-wide">
+                Identité é um produto de Modo 2 Producoes LTDA
               </p>
             </div>
           </Link>

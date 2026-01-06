@@ -18,19 +18,19 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">FT</span>
+                <span className="text-accent-foreground font-display font-bold text-xl">M2</span>
               </div>
               <div>
                 <h3 className="font-display font-bold text-lg leading-tight">
-                  FT Empreendimentos
+                  Modo 2 Producoes
                 </h3>
                 <p className="text-xs text-primary-foreground/70 tracking-wide">
-                  Consultoria & Contabilidade
+                  Produção de Eventos
                 </p>
               </div>
             </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Soluções empresariais com 19 anos de experiência para impulsionar o crescimento do seu negócio.
+              Soluções empresariais com 23 anos de experiência para impulsionar o crescimento do seu negócio.
             </p>
           </div>
 
@@ -67,32 +67,26 @@ export function Footer() {
             <h4 className="font-display font-semibold text-lg mb-4">Contato</h4>
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="tel:+5571991898703"
+                href="tel:+5571329000000"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(71) 99189-8703</span>
+                <span>(71) 3290-XXXX</span>
               </a>
               <a
-                href="tel:+5571984199209"
+                href="tel:+5571301000000"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(71) 98419-9209</span>
-              </a>
-              <a
-                href="mailto:publicitedson@gmail.com"
-                className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
-              >
-                <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>publicitedson@gmail.com</span>
+                <span>(71) 3010-XXXX</span>
               </a>
               <div className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <span>
-                  Praça Dona Rosa Prates, 273<br />
-                  Caculezinho — Caculé – BA<br />
-                  CEP: 46300-000
+                  Av. Tancredo Neves, 2539<br />
+                  Edif Ceo Salvador Shopping<br />
+                  Torre Nova Iorque, Sala 805<br />
+                  Salvador – BA, CEP: 41820-021
                 </span>
               </div>
             </div>
@@ -102,11 +96,11 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
-            <div className="flex flex-col items-center md:items-start gap-1">
-              <p>© 2025 FT Empreendimentos LTDA. Todos os direitos reservados.</p>
-              <p className="text-xs text-accent">Identité é um produto de FT Empreendimentos LTDA</p>
+            <div className="flex flex-col items-center md:items-start gap-2">
+              <p>© 2025 Modo 2 Producoes LTDA. Todos os direitos reservados.</p>
+              <p className="text-base font-semibold text-accent">Identité é um produto de Modo 2 Producoes LTDA</p>
             </div>
-            <p className="text-xs">CNPJ: 07.757.581/0001-50</p>
+            <p className="text-xs">CNPJ: 04.860.103/0001-82</p>
           </div>
         </div>
       </div>

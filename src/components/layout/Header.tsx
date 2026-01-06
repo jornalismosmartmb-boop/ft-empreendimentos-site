@@ -23,14 +23,14 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center shadow-elegant group-hover:shadow-gold transition-shadow duration-300">
-              <span className="text-primary-foreground font-display font-bold text-xl">FT</span>
+              <span className="text-primary-foreground font-display font-bold text-xl">M2</span>
             </div>
             <div className="hidden sm:block">
               <h1 className="font-display font-bold text-lg text-foreground leading-tight">
-                FT Empreendimentos
+                Modo 2 Producoes
               </h1>
               <p className="text-xs text-muted-foreground tracking-wide">
-                Consultoria & Contabilidade
+                Produção de Eventos
               </p>
             </div>
           </Link>
@@ -55,9 +55,9 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+5571991898703" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="tel:+5571329000000" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
               <Phone className="w-4 h-4" />
-              <span>(71) 99189-8703</span>
+              <span>(71) 3290-XXXX</span>
             </a>
             <Button asChild variant="gold" size="sm">
               <Link to="/contato">Fale Conosco</Link>

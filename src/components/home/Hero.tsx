@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Target, TrendingUp } from "lucide-react";
 
 const highlights = [
-  { icon: Award, text: "19 anos de experiência" },
+  { icon: Award, text: "23 anos de experiência" },
   { icon: Users, text: "Atendimento personalizado" },
   { icon: Target, text: "Soluções estratégicas" },
   { icon: TrendingUp, text: "Compromisso com resultados" },
@@ -23,21 +23,19 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 mb-8 animate-fade-in">
             <Award className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium">Consultoria & Contabilidade desde 2006</span>
+            <span className="text-sm font-medium">Produção de Eventos desde 2002</span>
           </div>
 
           {/* Title */}
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up">
             Soluções Empresariais com{" "}
-            <span className="text-accent">19 Anos</span> de Experiência
+            <span className="text-accent">23 Anos</span> de Experiência
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in-delay-1">
-            Consultoria, contabilidade e certificação digital — incluindo empresas como{" "}
-            <strong className="text-accent">Tite Certificado</strong>,{" "}
-            <strong className="text-accent">Tite Certificadora</strong> e{" "}
-            <strong className="text-accent">Certificado Tite</strong> — para impulsionar o crescimento do seu negócio.
+            Produção de eventos, feiras, congressos e exposições — incluindo a marca{" "}
+            <strong className="text-accent">Identité</strong> — para impulsionar o crescimento do seu negócio.
           </p>
 
           {/* CTA Buttons */}

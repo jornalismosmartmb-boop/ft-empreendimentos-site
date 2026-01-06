@@ -5,24 +5,25 @@ const contactItems = [
     icon: Phone,
     title: "Telefones",
     items: [
-      { text: "(71) 99189-8703", href: "tel:+5571991898703" },
-      { text: "(71) 98419-9209", href: "tel:+5571984199209" },
+      { text: "(71) 3290-XXXX", href: "tel:+5571329000000" },
+      { text: "(71) 3010-XXXX", href: "tel:+5571301000000" },
     ],
   },
   {
     icon: Mail,
     title: "E-mail",
     items: [
-      { text: "publicitedson@gmail.com", href: "mailto:publicitedson@gmail.com" },
+      { text: "contato@modo2.com.br", href: "mailto:contato@modo2.com.br" },
     ],
   },
   {
     icon: MapPin,
     title: "Endereço",
     items: [
-      { text: "Praça Dona Rosa Prates, 273", href: null },
-      { text: "Caculezinho — Caculé – BA", href: null },
-      { text: "CEP: 46300-000", href: null },
+      { text: "Av. Tancredo Neves, 2539", href: null },
+      { text: "Edif Ceo Salvador Shopping", href: null },
+      { text: "Torre Nova Iorque, Sala 805", href: null },
+      { text: "Salvador – BA, CEP: 41820-021", href: null },
     ],
   },
   {

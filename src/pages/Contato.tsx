@@ -12,25 +12,24 @@ const contactInfo = [
     icon: Phone,
     title: "Telefones",
     items: [
-      { text: "(71) 3290-XXXX", href: "tel:+5571329000000" },
-      { text: "(71) 3010-XXXX", href: "tel:+5571301000000" },
+      { text: "(71) 99189-8703", href: "tel:+5571991898703" },
+      { text: "(71) 98419-9209", href: "tel:+5571984199209" },
     ],
   },
   {
     icon: Mail,
     title: "E-mail",
     items: [
-      { text: "contato@modo2.com.br", href: "mailto:contato@modo2.com.br" },
+      { text: "publicitedson@gmail.com", href: "mailto:publicitedson@gmail.com" },
     ],
   },
   {
     icon: MapPin,
     title: "Endereço",
     items: [
-      { text: "Av. Tancredo Neves, 2539", href: null },
-      { text: "Edif Ceo Salvador Shopping", href: null },
-      { text: "Torre Nova Iorque, Sala 805", href: null },
-      { text: "Salvador – BA, CEP: 41820-021", href: null },
+      { text: "Praça Dona Rosa Prates, 273", href: null },
+      { text: "Caculezinho", href: null },
+      { text: "Caculé – BA", href: null },
     ],
   },
   {
@@ -57,7 +56,7 @@ const Contato = () => {
     
     // Create WhatsApp message
     const whatsappMessage = `Olá! Meu nome é ${formData.name}.%0A%0AAssunto: ${formData.subject}%0A%0A${formData.message}%0A%0AContato: ${formData.phone} / ${formData.email}`;
-    const whatsappUrl = `https://wa.me/5571329000000?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/5571991898703?text=${whatsappMessage}`;
     
     window.open(whatsappUrl, "_blank");
     
@@ -187,7 +186,7 @@ const Contato = () => {
                     <p className="text-sm text-muted-foreground">Clique abaixo para falar diretamente conosco.</p>
                   </div>
                   <Button asChild variant="default" className="bg-green-600 hover:bg-green-700">
-                    <a href="https://wa.me/5571329000000" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/5571991898703" target="_blank" rel="noopener noreferrer">
                       Chamar no WhatsApp
                     </a>
                   </Button>
@@ -238,8 +237,8 @@ const Contato = () => {
                       Nossa Localização
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      Av. Tancredo Neves, 2539<br />
-                      Salvador – BA
+                      Praça Dona Rosa Prates, 273<br />
+                      Caculé – BA
                     </p>
                   </div>
                 </div>

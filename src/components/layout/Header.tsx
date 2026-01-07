@@ -30,7 +30,7 @@ export function Header() {
                 FT Empreendimentos
               </h1>
               <p className="text-xs text-accent font-medium tracking-wide">
-                Identité é um produto de Modo 2 Producoes LTDA
+                Identité é um produto de FT Empreendimentos LTDA
               </p>
             </div>
           </Link>

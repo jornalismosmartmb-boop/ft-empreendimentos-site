@@ -35,7 +35,7 @@ export function Hero() {
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in-delay-1">
             Consultoria, contabilidade e certificação digital — incluindo a marca{" "}
-            <strong className="text-accent">Identité</strong> — para impulsionar o crescimento do seu negócio.
+            <strong className="text-accent">Identite</strong> — para impulsionar o crescimento do seu negócio.
           </p>
 
           {/* CTA Buttons */}

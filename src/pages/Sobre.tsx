@@ -7,7 +7,7 @@ const values = [
   {
     icon: Award,
     title: "Experiência",
-    description: "19 anos no mercado, com conhecimento profundo em consultoria e contabilidade.",
+    description: "23 anos no mercado, com conhecimento profundo em consultoria e contabilidade.",
   },
   {
     icon: Users,
@@ -27,11 +27,11 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2006", event: "Fundação da FT Empreendimentos" },
-  { year: "2010", event: "Expansão dos serviços de contabilidade" },
+  { year: "2002", event: "Fundação da MODO 2 PRODUÇÕES" },
+  { year: "2007", event: "Adesão ao Simples Nacional" },
   { year: "2015", event: "Parceria com grandes empresas" },
   { year: "2020", event: "Digitalização completa dos processos" },
-  { year: "2025", event: "19 anos de excelência no mercado" },
+  { year: "2025", event: "23 anos de excelência no mercado" },
 ];
 
 const Sobre = () => {
@@ -48,7 +48,7 @@ const Sobre = () => {
               Quem Somos
             </h1>
             <p className="text-lg text-primary-foreground/85 leading-relaxed">
-              Conheça a história e os valores que guiam a FT Empreendimentos há mais de uma década.
+              Conheça a história e os valores que guiam a MODO 2 PRODUÇÕES há mais de duas décadas.
             </p>
           </div>
         </div>
@@ -64,13 +64,13 @@ const Sobre = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  A <strong className="text-foreground">FT Empreendimentos</strong> é uma empresa de consultoria e contabilidade com mais de uma década de experiência, oferecendo soluções estratégicas para profissionais, empreendedores e empresas de todos os portes.
+                  A <strong className="text-foreground">MODO 2 PRODUÇÕES</strong> é uma empresa de consultoria e contabilidade com mais de duas décadas de experiência, oferecendo soluções estratégicas para profissionais, empreendedores e empresas de todos os portes.
                 </p>
                 <p>
                   Atuamos com foco em consultoria empresarial, contabilidade e certificação digital. Nossa missão é ser a parceira ideal para o sucesso do seu negócio.
                 </p>
                 <p>
-                  Com sede em Caculé, Bahia, atendemos clientes em toda a região, oferecendo serviços personalizados e de alta qualidade.
+                  Com sede em Salvador, Bahia, atendemos clientes em toda a região, oferecendo serviços personalizados e de alta qualidade.
                 </p>
               </div>
             </div>
@@ -79,17 +79,17 @@ const Sobre = () => {
             <div className="relative">
               <div className="bg-gradient-hero rounded-2xl p-8 text-center">
                 <div className="w-24 h-24 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-6 shadow-gold">
-                  <span className="text-accent-foreground font-display font-bold text-4xl">FT</span>
+                  <span className="text-accent-foreground font-display font-bold text-4xl">M2</span>
                 </div>
                 <h3 className="font-display text-3xl font-bold text-primary-foreground mb-2">
-                  Desde 2006
+                  Desde 2002
                 </h3>
                 <p className="text-primary-foreground/80 text-lg">
                   Construindo parcerias de sucesso
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="bg-primary-foreground/10 rounded-xl p-4">
-                    <p className="font-display text-2xl font-bold text-accent">19+</p>
+                    <p className="font-display text-2xl font-bold text-accent">23+</p>
                     <p className="text-sm text-primary-foreground/80">Anos de Mercado</p>
                   </div>
                   <div className="bg-primary-foreground/10 rounded-xl p-4">

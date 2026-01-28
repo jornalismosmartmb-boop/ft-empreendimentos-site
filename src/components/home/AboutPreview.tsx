@@ -23,7 +23,7 @@ export function AboutPreview() {
               Sua Parceira em Soluções Empresariais
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              A FT Empreendimentos é uma empresa com mais de uma década de experiência, oferecendo soluções estratégicas em consultoria e contabilidade para profissionais, empreendedores e empresas de todos os portes. Atuamos com foco em excelência e resultados.
+              A MODO 2 PRODUÇÕES é uma empresa com mais de duas décadas de experiência, oferecendo soluções estratégicas em consultoria e contabilidade para profissionais, empreendedores e empresas de todos os portes. Atuamos com foco em excelência e resultados.
             </p>
 
             <ul className="space-y-3 mb-8">
@@ -49,10 +49,10 @@ export function AboutPreview() {
               <div className="aspect-[4/3] bg-gradient-hero flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-24 h-24 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-6 shadow-gold">
-                    <span className="text-accent-foreground font-display font-bold text-4xl">FT</span>
+                    <span className="text-accent-foreground font-display font-bold text-4xl">M2</span>
                   </div>
                   <h3 className="font-display text-2xl font-bold text-primary-foreground mb-2">
-                    19 Anos
+                    23 Anos
                   </h3>
                   <p className="text-primary-foreground/80">
                     Transformando negócios
@@ -69,7 +69,7 @@ export function AboutPreview() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Confiança</p>
-                  <p className="text-sm text-muted-foreground">Atuando desde 2006</p>
+                  <p className="text-sm text-muted-foreground">Atuando desde 2002</p>
                 </div>
               </div>
             </div>

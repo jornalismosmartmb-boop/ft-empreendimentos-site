@@ -3,26 +3,26 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 const contactItems = [
   {
     icon: Phone,
-    title: "Telefones",
+    title: "Telefone",
     items: [
-      { text: "(71) 99189-8703", href: "tel:+5571991898703" },
-      { text: "(71) 98419-9209", href: "tel:+5571984199209" },
+      { text: "(71) 3014-6905", href: "tel:+557130146905" },
     ],
   },
   {
     icon: Mail,
     title: "E-mail",
     items: [
-      { text: "publicitedson@gmail.com", href: "mailto:publicitedson@gmail.com" },
+      { text: "procuradoria.mbassessores@gmail.com", href: "mailto:procuradoria.mbassessores@gmail.com" },
     ],
   },
   {
     icon: MapPin,
     title: "Endereço",
     items: [
-      { text: "Praça Dona Rosa Prates, 273", href: null },
-      { text: "Caculezinho", href: null },
-      { text: "Caculé – BA", href: null },
+      { text: "Av. Tancredo Neves, 2539", href: null },
+      { text: "Edif CEO Salvador Shopping", href: null },
+      { text: "Torre Nova Iorque, Sala 805", href: null },
+      { text: "Salvador – BA, 41820-021", href: null },
     ],
   },
   {

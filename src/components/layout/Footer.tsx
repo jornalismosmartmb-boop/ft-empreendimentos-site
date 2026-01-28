@@ -18,11 +18,11 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">FT</span>
+                <span className="text-accent-foreground font-display font-bold text-xl">M2</span>
               </div>
               <div>
                 <h3 className="font-display font-bold text-lg leading-tight">
-                  FT Empreendimentos
+                  MODO 2 PRODUÇÕES
                 </h3>
                 <p className="text-xs text-primary-foreground/70 tracking-wide">
                   Consultoria & Contabilidade
@@ -30,7 +30,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Soluções empresariais com 19 anos de experiência para impulsionar o crescimento do seu negócio.
+              Soluções empresariais com 23 anos de experiência para impulsionar o crescimento do seu negócio.
             </p>
           </div>
 
@@ -67,25 +67,18 @@ export function Footer() {
             <h4 className="font-display font-semibold text-lg mb-4">Contato</h4>
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="tel:+5571991898703"
+                href="tel:+557130146905"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(71) 99189-8703</span>
-              </a>
-              <a
-                href="tel:+5571984199209"
-                className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
-              >
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(71) 98419-9209</span>
+                <span>(71) 3014-6905</span>
               </a>
               <div className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <span>
-                  Praça Dona Rosa Prates, 273<br />
-                  Caculezinho<br />
-                  Caculé – BA
+                  Av. Tancredo Neves, 2539<br />
+                  Edif CEO Salvador Shopping<br />
+                  Salvador – BA
                 </span>
               </div>
             </div>
@@ -97,9 +90,9 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
             <div className="flex flex-col items-center md:items-start gap-2">
               <p>Todos os direitos reservados.</p>
-              <p className="text-base font-semibold text-accent">Identité é um produto de FT Empreendimentos LTDA</p>
+              <p className="text-base font-semibold text-accent">Identité é um produto de MODO 2 PRODUÇÕES LTDA</p>
             </div>
-            <p className="text-xs">CNPJ: 07.757.581/0001-50</p>
+            <p className="text-xs">CNPJ: 04.860.103/0001-82</p>
           </div>
         </div>
       </div>

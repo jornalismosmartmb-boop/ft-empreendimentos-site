@@ -90,7 +90,11 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
             <div className="flex flex-col items-center md:items-start gap-2">
               <p>Todos os direitos reservados.</p>
-              <p className="text-base font-semibold text-accent">Identite é um produto de MODO 2 PRODUÇÕES LTDA</p>
+              <div className="text-base font-semibold text-accent space-y-1">
+                <p>Identite é um produto de MODO 2 PRODUÇÕES LTDA</p>
+                <p>Identité é um produto de MODO 2 PRODUÇÕES LTDA</p>
+                <p>Identitè é um produto de MODO 2 PRODUÇÕES LTDA</p>
+              </div>
             </div>
             <p className="text-xs">CNPJ: 04.860.103/0001-82</p>
           </div>

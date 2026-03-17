@@ -1,36 +1,34 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Building2, FileText, MapPin, Briefcase } from "lucide-react";
 
 const contactItems = [
   {
-    icon: Phone,
-    title: "Telefone",
-    items: [
-      { text: "(71) 3014-6905", href: "tel:+557130146905" },
-    ],
+    icon: FileText,
+    title: "CNPJ",
+    items: [{ text: "49.370.903/0001-53", href: null }],
   },
   {
-    icon: Mail,
-    title: "E-mail",
-    items: [
-      { text: "procuradoria.mbassessores@gmail.com", href: "mailto:procuradoria.mbassessores@gmail.com" },
-    ],
+    icon: Building2,
+    title: "Razão Social",
+    items: [{ text: "Joao Adenilson Pedrosa de Melo", href: null }],
   },
   {
     icon: MapPin,
     title: "Endereço",
     items: [
-      { text: "Av. Tancredo Neves, 2539", href: null },
-      { text: "Edif CEO Salvador Shopping", href: null },
-      { text: "Torre Nova Iorque, Sala 805", href: null },
-      { text: "Salvador – BA, 41820-021", href: null },
+      { text: "Avenida Joao Velho do Rego, 731", href: null },
+      { text: "Parque Colonial", href: null },
+      { text: "São Paulo - SP, 03.967-000", href: null },
+      { text: "Brasil", href: null },
     ],
   },
   {
-    icon: Clock,
-    title: "Horário",
+    icon: Briefcase,
+    title: "Atividade Principal",
     items: [
-      { text: "Segunda a Sexta", href: null },
-      { text: "08:00 às 18:00", href: null },
+      {
+        text: "Comércio varejista especializado de equipamentos e suprimentos de informática",
+        href: null,
+      },
     ],
   },
 ];
@@ -39,20 +37,18 @@ export function ContactInfo() {
   return (
     <section className="section-padding bg-background">
       <div className="container-narrow mx-auto">
-        {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
-            Contato
+            Dados da Receita Federal
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Entre em Contato Conosco
+            Resumo Cadastral da Empresa
           </h2>
           <p className="text-muted-foreground text-lg">
-            Estamos disponíveis para atender você e esclarecer todas as suas dúvidas.
+            Informações principais da empresa Leletronicos com base nos dados enviados.
           </p>
         </div>
 
-        {/* Contact Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {contactItems.map((item, index) => (
             <div
@@ -67,19 +63,9 @@ export function ContactInfo() {
               </h3>
               <div className="space-y-1">
                 {item.items.map((contactItem, idx) => (
-                  contactItem.href ? (
-                    <a
-                      key={idx}
-                      href={contactItem.href}
-                      className="block text-muted-foreground hover:text-accent transition-colors"
-                    >
-                      {contactItem.text}
-                    </a>
-                  ) : (
-                    <p key={idx} className="text-muted-foreground">
-                      {contactItem.text}
-                    </p>
-                  )
+                  <p key={idx} className="text-muted-foreground">
+                    {contactItem.text}
+                  </p>
                 ))}
               </div>
             </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -20,24 +20,21 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full bg-card/95 backdrop-blur-md border-b border-border/50 shadow-sm">
       <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center shadow-elegant group-hover:shadow-gold transition-shadow duration-300">
-              <span className="text-primary-foreground font-display font-bold text-xl">M2</span>
+              <span className="text-primary-foreground font-display font-bold text-xl">LE</span>
             </div>
             <div className="hidden sm:block">
               <h1 className="font-display font-bold text-lg text-foreground leading-tight">
-                MODO 2 PRODUÇÕES
+                Leletronicos
               </h1>
               <div className="text-xs text-accent font-medium tracking-wide space-y-0.5">
-                <p>Identite é um produto de MODO 2 PRODUÇÕES LTDA</p>
-                <p>Identité é um produto de MODO 2 PRODUÇÕES LTDA</p>
-                <p>Identitè é um produto de MODO 2 PRODUÇÕES LTDA</p>
+                <p>Razão Social: Joao Adenilson Pedrosa de Melo</p>
+                <p>MEI • CNPJ 49.370.903/0001-53</p>
               </div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
@@ -55,18 +52,16 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+557130146905" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-              <Phone className="w-4 h-4" />
-              <span>(71) 3014-6905</span>
-            </a>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Building2 className="w-4 h-4" />
+              <span>São Paulo • SP</span>
+            </div>
             <Button asChild variant="gold" size="sm">
-              <Link to="/contato">Fale Conosco</Link>
+              <Link to="/informacoes">Ver Dados</Link>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
@@ -76,7 +71,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <nav className="lg:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-1">
@@ -97,8 +91,8 @@ export function Header() {
               ))}
               <div className="mt-4 pt-4 border-t border-border">
                 <Button asChild variant="gold" className="w-full">
-                  <Link to="/contato" onClick={() => setIsOpen(false)}>
-                    Fale Conosco
+                  <Link to="/informacoes" onClick={() => setIsOpen(false)}>
+                    Ver Dados
                   </Link>
                 </Button>
               </div>

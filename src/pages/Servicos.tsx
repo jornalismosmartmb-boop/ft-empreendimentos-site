@@ -1,106 +1,106 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { 
-  Briefcase, 
-  Calculator, 
-  FileCheck, 
-  TrendingUp, 
-  Shield, 
+import {
+  Briefcase,
+  Calculator,
+  FileCheck,
+  TrendingUp,
+  Shield,
   Users,
   FileText,
   Building2,
   ArrowRight,
-  CheckCircle2
+  CheckCircle2,
 } from "lucide-react";
 
 const services = [
   {
     icon: Briefcase,
-    title: "Consultoria Empresarial",
-    description: "Análise estratégica e planejamento personalizado para otimizar processos, reduzir custos e impulsionar o crescimento do seu negócio.",
+    title: "Atividade Principal",
+    description: "Comércio varejista especializado de equipamentos e suprimentos de informática.",
     features: [
-      "Diagnóstico empresarial completo",
-      "Planejamento estratégico",
-      "Reestruturação organizacional",
-      "Análise de viabilidade de projetos",
+      "CNAE G-4751-2/01",
+      "Atuação no varejo especializado",
+      "Segmento de informática",
+      "Empresa sediada em São Paulo - SP",
     ],
   },
   {
     icon: Calculator,
-    title: "Contabilidade",
-    description: "Gestão contábil completa com foco em conformidade fiscal, relatórios precisos e suporte para tomada de decisões estratégicas.",
+    title: "Capital Social",
+    description: "Capital social informado de R$ 25.000,00.",
     features: [
-      "Escrituração contábil",
-      "Elaboração de balanços",
-      "Demonstrações financeiras",
-      "Análise de indicadores",
+      "Valor declarado: R$ 25.000,00",
+      "Cadastro empresarial atualizado",
+      "Informação exibida no resumo oficial",
+      "Baseado nos dados enviados",
     ],
   },
   {
     icon: FileCheck,
-    title: "Certificação Digital",
-    description: "Emissão e renovação de certificados digitais para pessoas físicas e jurídicas, incluindo Tite Certificado, Tite Certificadora e Certificado Tite.",
+    title: "Dados de Registro",
+    description: "CNPJ e data de abertura conforme Receita Federal.",
     features: [
-      "e-CPF e e-CNPJ",
-      "Certificado A1 e A3",
-      "NF-e e CT-e",
-      "Renovação e suporte técnico",
+      "CNPJ 49.370.903/0001-53",
+      "Abertura em 27/01/2023",
+      "Nome fantasia Leletronicos",
+      "Razão social Joao Adenilson Pedrosa de Melo",
     ],
   },
   {
     icon: TrendingUp,
-    title: "Assessoria Fiscal",
-    description: "Orientação tributária especializada para redução de custos, planejamento fiscal e cumprimento de todas as obrigações fiscais.",
+    title: "Regime Tributário",
+    description: "Optante pelo Simples Nacional desde a abertura.",
     features: [
-      "Planejamento tributário",
-      "Apuração de impostos",
-      "Obrigações acessórias",
-      "Recuperação de créditos",
+      "Optante pelo Simples",
+      "Data de opção: 27/01/2023",
+      "Enquadramento compatível com MEI",
+      "Status tributário informado",
     ],
   },
   {
     icon: Building2,
-    title: "Regularização de Empresas",
-    description: "Abertura, alteração e encerramento de empresas com agilidade, segurança e total conformidade legal.",
+    title: "Estrutura Empresarial",
+    description: "Empresa cadastrada como matriz.",
     features: [
-      "Abertura de empresas",
-      "Alterações contratuais",
-      "Encerramento de CNPJ",
-      "Regularização cadastral",
+      "Tipo de unidade: MATRIZ",
+      "Natureza jurídica 213-5",
+      "Empresário Individual",
+      "Sem situação especial disponível",
     ],
   },
   {
     icon: Users,
-    title: "Departamento Pessoal",
-    description: "Gestão completa de folha de pagamento, admissões, demissões e cumprimento de todas as obrigações trabalhistas.",
+    title: "Enquadramento",
+    description: "Empresa classificada como MEI.",
     features: [
-      "Folha de pagamento",
-      "Admissões e demissões",
-      "eSocial e FGTS Digital",
-      "Férias e 13º salário",
+      "Porte: MEI",
+      "Opção pelo MEI: Sim",
+      "Situação cadastral ATIVA",
+      "Dados oficiais resumidos",
     ],
   },
   {
     icon: Shield,
-    title: "Legalização",
-    description: "Serviços de legalização junto a órgãos públicos, obtenção de licenças e alvarás para funcionamento regular.",
+    title: "Localização",
+    description: "Sede registrada em São Paulo - SP.",
     features: [
-      "Alvarás de funcionamento",
-      "Licenças ambientais",
-      "Vigilância sanitária",
-      "Corpo de bombeiros",
+      "Avenida Joao Velho do Rego, 731",
+      "Bairro Parque Colonial",
+      "CEP 03.967-000",
+      "Brasil",
     ],
   },
   {
     icon: FileText,
-    title: "Assessoria Contábil",
-    description: "Suporte contábil contínuo para acompanhamento da saúde financeira e orientação em decisões estratégicas.",
+    title: "Resumo Legal",
+    description: "Conjunto de informações cadastrais exibidas na aplicação.",
     features: [
-      "Acompanhamento mensal",
-      "Relatórios gerenciais",
-      "Orientação financeira",
-      "Suporte a decisões",
+      "Razão social completa",
+      "Nome fantasia",
+      "CNPJ e abertura",
+      "Tributação e porte",
     ],
   },
 ];
@@ -108,24 +108,22 @@ const services = [
 const Servicos = () => {
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="bg-gradient-hero text-primary-foreground py-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
-              Nossos Serviços
+              Resumo Empresarial
             </span>
             <h1 className="font-display text-4xl sm:text-5xl font-bold mb-6">
-              Soluções Completas para Seu Negócio
+              Dados Estruturados da Empresa
             </h1>
             <p className="text-lg text-primary-foreground/85 leading-relaxed">
-              Oferecemos uma gama completa de serviços empresariais para atender todas as necessidades da sua empresa com excelência.
+              Visualize os principais blocos de informação empresarial da Leletronicos.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services List */}
       <section className="section-padding bg-background">
         <div className="container-narrow mx-auto">
           <div className="grid gap-8">
@@ -165,17 +163,16 @@ const Servicos = () => {
             ))}
           </div>
 
-          {/* CTA */}
           <div className="mt-16 text-center bg-muted/50 rounded-2xl p-8 sm:p-12">
             <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-4">
-              Precisa de Ajuda para Escolher?
+              Ver Dados Completos
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              Nossa equipe está pronta para entender suas necessidades e indicar a melhor solução para o seu negócio.
+              Consulte a página de informações para acessar o resumo detalhado da Receita Federal.
             </p>
             <Button asChild variant="gold" size="lg">
-              <Link to="/contato">
-                Solicitar Orçamento
+              <Link to="/informacoes">
+                Abrir Informações
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>

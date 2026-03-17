@@ -1,114 +1,112 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle2, Award, Users, Target, TrendingUp, ArrowRight } from "lucide-react";
+import { CheckCircle2, Building2, CalendarDays, FileText, Briefcase, ArrowRight } from "lucide-react";
 
 const values = [
   {
-    icon: Award,
-    title: "Experiência",
-    description: "23 anos no mercado, com conhecimento profundo em consultoria e contabilidade.",
+    icon: Building2,
+    title: "Nome Fantasia",
+    description: "Leletronicos.",
   },
   {
-    icon: Users,
-    title: "Parceria",
-    description: "Construímos relacionamentos duradouros baseados na confiança e transparência.",
+    icon: FileText,
+    title: "Razão Social",
+    description: "Joao Adenilson Pedrosa de Melo.",
   },
   {
-    icon: Target,
-    title: "Foco em Resultados",
-    description: "Todas as nossas soluções são orientadas para gerar resultados concretos.",
+    icon: CalendarDays,
+    title: "Abertura",
+    description: "27/01/2023.",
   },
   {
-    icon: TrendingUp,
-    title: "Inovação",
-    description: "Acompanhamos as tendências do mercado para oferecer soluções atualizadas.",
+    icon: Briefcase,
+    title: "Natureza Jurídica",
+    description: "Empresário (Individual) (213-5).",
   },
 ];
 
 const milestones = [
-  { year: "2002", event: "Fundação da MODO 2 PRODUÇÕES" },
-  { year: "2007", event: "Adesão ao Simples Nacional" },
-  { year: "2015", event: "Parceria com grandes empresas" },
-  { year: "2020", event: "Digitalização completa dos processos" },
-  { year: "2025", event: "23 anos de excelência no mercado" },
+  { year: "2023", event: "Abertura da empresa em 27/01/2023" },
+  { year: "2023", event: "Enquadramento como MEI" },
+  { year: "2023", event: "Opção pelo Simples Nacional desde 27/01/2023" },
+  { year: "Atual", event: "Situação cadastral ATIVA" },
 ];
 
 const Sobre = () => {
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="bg-gradient-hero text-primary-foreground py-20">
         <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
-              Sobre Nós
+              Sobre a Empresa
             </span>
             <h1 className="font-display text-4xl sm:text-5xl font-bold mb-6">
-              Quem Somos
+              Perfil Cadastral
             </h1>
             <p className="text-lg text-primary-foreground/85 leading-relaxed">
-              Conheça a história e os valores que guiam a MODO 2 PRODUÇÕES há mais de duas décadas.
+              Conheça os principais dados oficiais da empresa Leletronicos enviados por você.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="section-padding bg-background">
         <div className="container-narrow mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Nossa História
+                Resumo da Empresa
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  A <strong className="text-foreground">MODO 2 PRODUÇÕES</strong> é uma empresa de consultoria e contabilidade com mais de duas décadas de experiência, oferecendo soluções estratégicas para profissionais, empreendedores e empresas de todos os portes.
+                  A empresa <strong className="text-foreground">Joao Adenilson Pedrosa de Melo</strong> opera com o nome fantasia
+                  <strong className="text-foreground"> Leletronicos</strong> e está registrada sob o CNPJ 49.370.903/0001-53.
                 </p>
                 <p>
-                  Atuamos com foco em consultoria empresarial, contabilidade e certificação digital. Nossa missão é ser a parceira ideal para o sucesso do seu negócio.
+                  Sua sede está localizada na Avenida Joao Velho do Rego, 731, bairro Parque Colonial,
+                  São Paulo - SP, CEP 03.967-000, Brasil.
                 </p>
                 <p>
-                  Com sede em Salvador, Bahia, atendemos clientes em toda a região, oferecendo serviços personalizados e de alta qualidade.
+                  A atividade principal informada é o comércio varejista especializado de equipamentos e suprimentos de informática,
+                  conforme CNAE G-4751-2/01.
                 </p>
               </div>
             </div>
 
-            {/* Visual Card */}
             <div className="relative">
               <div className="bg-gradient-hero rounded-2xl p-8 text-center">
                 <div className="w-24 h-24 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-6 shadow-gold">
-                  <span className="text-accent-foreground font-display font-bold text-4xl">M2</span>
+                  <span className="text-accent-foreground font-display font-bold text-4xl">LE</span>
                 </div>
                 <h3 className="font-display text-3xl font-bold text-primary-foreground mb-2">
-                  Desde 2002
+                  Capital Social
                 </h3>
                 <p className="text-primary-foreground/80 text-lg">
-                  Construindo parcerias de sucesso
+                  R$ 25.000,00
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="bg-primary-foreground/10 rounded-xl p-4">
-                    <p className="font-display text-2xl font-bold text-accent">23+</p>
-                    <p className="text-sm text-primary-foreground/80">Anos de Mercado</p>
+                    <p className="font-display text-2xl font-bold text-accent">MEI</p>
+                    <p className="text-sm text-primary-foreground/80">Enquadramento</p>
                   </div>
                   <div className="bg-primary-foreground/10 rounded-xl p-4">
-                    <p className="font-display text-2xl font-bold text-accent">500+</p>
-                    <p className="text-sm text-primary-foreground/80">Clientes Atendidos</p>
+                    <p className="font-display text-2xl font-bold text-accent">ATIVA</p>
+                    <p className="text-sm text-primary-foreground/80">Situação</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Values */}
           <div className="mb-20">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Nossos Valores
+                Informações Principais
               </h2>
               <p className="text-muted-foreground text-lg">
-                Os princípios que norteiam nossa atuação e garantem a excelência em todos os serviços.
+                Os dados centrais do cadastro empresarial exibidos de forma resumida.
               </p>
             </div>
 
@@ -129,11 +127,10 @@ const Sobre = () => {
             </div>
           </div>
 
-          {/* Timeline */}
           <div className="mb-20">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Nossa Trajetória
+                Linha do Tempo
               </h2>
             </div>
 
@@ -156,17 +153,16 @@ const Sobre = () => {
             </div>
           </div>
 
-          {/* CTA */}
           <div className="text-center bg-muted/50 rounded-2xl p-8 sm:p-12">
             <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-4">
-              Vamos Trabalhar Juntos?
+              Ver Dados Completos
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              Entre em contato e descubra como podemos ajudar sua empresa a crescer.
+              Acesse a página de informações para consultar o resumo completo da empresa.
             </p>
             <Button asChild variant="gold" size="lg">
-              <Link to="/contato">
-                Fale Conosco
+              <Link to="/informacoes">
+                Ir para Informações
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>

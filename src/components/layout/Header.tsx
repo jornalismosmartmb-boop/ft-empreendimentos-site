@@ -71,6 +71,20 @@ export function Header() {
           </button>
         </div>
 
+        <div className="border-t border-accent/20 bg-gradient-gold/10 py-3">
+          <div className="flex flex-col gap-2 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+              Identitè é um produto de João Adenilson Pedrosa de Melo
+            </p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+              Identité é um produto de João Adenilson Pedrosa de Melo
+            </p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+              Identite é um produto de João Adenilson Pedrosa de Melo
+            </p>
+          </div>
+        </div>
+
         {isOpen && (
           <nav className="lg:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-1">

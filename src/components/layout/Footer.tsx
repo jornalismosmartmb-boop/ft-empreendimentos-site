@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FileText, MapPin, Building2 } from "lucide-react";
+import { LegalModal } from "@/components/legal/LegalModal";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -10,10 +12,13 @@ const navLinks = [
 ];
 
 export function Footer() {
+  const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [termsOpen, setTermsOpen] = useState(false);
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container-narrow mx-auto section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center">
@@ -81,20 +86,72 @@ export function Footer() {
               </div>
             </div>
           </div>
+
+          {/* LEGAL */}
+          <div>
+            <h4 className="font-display font-semibold text-lg mb-4">Legal</h4>
+            <nav className="flex flex-col gap-2">
+              <button
+                onClick={() => setPrivacyOpen(true)}
+                className="text-sm text-primary-foreground/80 hover:text-accent transition-colors text-left"
+              >
+                Política de Privacidade e Cookies
+              </button>
+              <button
+                onClick={() => setTermsOpen(true)}
+                className="text-sm text-primary-foreground/80 hover:text-accent transition-colors text-left"
+              >
+                Termos de Uso
+              </button>
+            </nav>
+          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
             <div className="flex flex-col items-center md:items-start gap-2">
               <p>Todos os direitos reservados.</p>
-              <p className="text-base font-semibold text-accent">
-                Razão Social: Joao Adenilson Pedrosa de Melo
-              </p>
+              <div className="flex flex-col gap-1">
+                <p className="text-base font-semibold text-accent">
+                  Identite é um produto de Joao Adenilson Pedrosa de Melo
+                </p>
+                <p className="text-base font-semibold text-accent">
+                  Identité é um produto de Joao Adenilson Pedrosa de Melo
+                </p>
+                <p className="text-base font-semibold text-accent">
+                  Identitè é um produto de Joao Adenilson Pedrosa de Melo
+                </p>
+              </div>
             </div>
             <p className="text-xs">CNPJ: 49.370.903/0001-53</p>
           </div>
         </div>
       </div>
+
+      {/* Modais Legais */}
+      <LegalModal open={privacyOpen} onOpenChange={setPrivacyOpen} title="Política de Privacidade e Cookies">
+        <p>
+          A <strong>Joao Adenilson Pedrosa de Melo</strong> observa a Lei Geral de Proteção de Dados (LGPD). Coletamos apenas dados estritamente necessários para atendimento e cumprimento de obrigações legais. Seus dados são tratados com segurança e confidencialidade.
+        </p>
+        <h3 className="text-foreground font-semibold text-base">Cookies Essenciais</h3>
+        <p>
+          Necessários para o funcionamento básico do site, como preferências de sessão e consentimento de cookies.
+        </p>
+        <h3 className="text-foreground font-semibold text-base">Cookies de Análise</h3>
+        <p>
+          Utilizamos ferramentas como o Meta Pixel para entender como os visitantes interagem com o site, permitindo melhorias contínuas na experiência do usuário.
+        </p>
+        <h3 className="text-foreground font-semibold text-base">Como Desativar</h3>
+        <p>
+          Você pode configurar seu navegador para bloquear cookies ou limpar os cookies armazenados a qualquer momento nas configurações de privacidade.
+        </p>
+      </LegalModal>
+
+      <LegalModal open={termsOpen} onOpenChange={setTermsOpen} title="Termos de Uso">
+        <p>
+          Ao utilizar este site, você concorda com estes Termos de Uso. As informações apresentadas são indicativas e podem ser atualizadas sem aviso prévio. Reservamo-nos o direito de modificar estes termos a qualquer momento.
+        </p>
+      </LegalModal>
     </footer>
   );
 }

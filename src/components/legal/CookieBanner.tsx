@@ -21,7 +21,7 @@ export function CookieBanner({ onOpenPrivacy }: CookieBannerProps) {
   if (!visible) return null;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[60] bg-primary text-primary-foreground shadow-lg animate-fade-in">
+    <div className="fixed bottom-0 left-0 right-0 z-[60] bg-primary text-primary-foreground shadow-[0_-4px_16px_rgba(0,0,0,0.15)] animate-fade-in">
       <div className="container-narrow mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-sm text-primary-foreground/90 text-center sm:text-left leading-relaxed">
           Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa Política de Privacidade e Cookies.

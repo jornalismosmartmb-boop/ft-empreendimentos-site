@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Qual é a situação cadastral?",
-    answer: `A situação cadastral está ATIVA desde ${company.situationSince}.`,
+    answer: `A situação cadastral está INAPTA desde ${company.situationSince}.`,
   },
   {
     question: "Qual é o enquadramento da empresa?",
@@ -52,7 +52,7 @@ const documents = [
     title: "Enquadramento",
     items: [
       "Natureza Jurídica: Empresário (Individual) (213-5)",
-      "Situação: ATIVA",
+      "Situação: INAPTA",
       "Tipo de unidade: MATRIZ",
       `Porte: ${company.size}`,
     ],
@@ -158,14 +158,14 @@ const Informacoes = () => {
                     Situação Atual
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    A empresa está ativa, com enquadramento de porte {company.size} e sem situação especial disponível.
+                    A empresa está inapta, com enquadramento de porte {company.size} e sem situação especial disponível.
                   </p>
                 </div>
                 <div className="bg-card rounded-xl p-6 border border-border">
                   <div className="space-y-4">
                     <div className="flex justify-between items-center pb-3 border-b border-border">
                       <span className="font-medium text-foreground">Situação</span>
-                      <span className="text-accent font-semibold">ATIVA</span>
+                      <span className="text-accent font-semibold">INAPTA</span>
                     </div>
                     <div className="flex justify-between items-center pb-3 border-b border-border">
                       <span className="font-medium text-foreground">Porte</span>

@@ -1,18 +1,18 @@
 // Dados oficiais da empresa (fonte: Cartão CNPJ da Receita Federal)
 // Centralize aqui qualquer atualização cadastral futura.
 export const company = {
-  brand: "Tassiane Bastos de Sant Ana Santos",
-  initials: "TS",
+  brand: "Luziano da Silva Damasceno",
+  initials: "LD",
   tagline: "Cabeleireiros, manicure e pedicure",
-  legalName: "Tassiane Bastos de Sant Ana Santos",
-  cnpj: "57.501.296/0001-41",
+  legalName: "Luziano da Silva Damasceno",
+  cnpj: "57.497.873/0001-79",
   openingDate: "30/09/2024",
   foundingYear: "2024",
   legalNature: "Empresário (Individual) (213-5)",
   size: "ME",
   sizeLabel: "ME (Microempresa)",
-  situation: "ATIVA",
-  situationSince: "30/09/2024",
+  situation: "INAPTA",
+  situationSince: "29/06/2026",
   mainActivity: "Cabeleireiros, manicure e pedicure",
   cnae: "96.02-5-01",
   unitType: "MATRIZ",
@@ -28,8 +28,8 @@ export const company = {
   phone: "(71) 98257-7846",
   email: "emaildoedsonlima@gmail.com",
   productLines: [
-    "Identitè é um produto de Tassiane Bastos de Sant Ana Santos",
-    "Identité é um produto de Tassiane Bastos de Sant Ana Santos",
-    "Identite é um produto de Tassiane Bastos de Sant Ana Santos",
+    "Identitè é um produto de Luziano da Silva Damasceno",
+    "Identité é um produto de Luziano da Silva Damasceno",
+    "Identite é um produto de Luziano da Silva Damasceno",
   ],
 };

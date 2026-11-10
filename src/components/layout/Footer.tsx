@@ -35,7 +35,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Empresa ativa desde {company.openingDate}, especializada em
+              Empresa aberta em {company.openingDate}, especializada em
               cabeleireiros, manicure e pedicure, com sede em {company.cityState}.
             </p>
           </div>

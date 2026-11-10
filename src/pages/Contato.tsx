@@ -106,7 +106,7 @@ const Contato = () => {
                     A empresa <strong className="text-foreground">{company.legalName}</strong> está
                     registrada sob o CNPJ <strong className="text-foreground">{company.cnpj}</strong>,
                     com situação cadastral
-                    <strong className="text-foreground"> ATIVA</strong> desde {company.situationSince}.
+                    <strong className="text-foreground"> INAPTA</strong> desde {company.situationSince}.
                   </p>
                   <p>
                     A natureza jurídica é <strong className="text-foreground">Empresário (Individual) (213-5)</strong>,

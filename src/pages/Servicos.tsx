@@ -46,7 +46,7 @@ const services = [
       `CNPJ ${company.cnpj}`,
       `Abertura em ${company.openingDate}`,
       `Nome empresarial ${company.legalName}`,
-      "Situação cadastral ATIVA",
+      "Situação cadastral INAPTA",
     ],
   },
   {
@@ -57,7 +57,7 @@ const services = [
       `Porte: ${company.size}`,
       "Empresário Individual",
       "Natureza jurídica 213-5",
-      "Situação cadastral ATIVA",
+      "Situação cadastral INAPTA",
     ],
   },
   {
@@ -74,9 +74,9 @@ const services = [
   {
     icon: Users,
     title: "Situação Cadastral",
-    description: `Empresa ATIVA desde ${company.situationSince}.`,
+    description: `Empresa INAPTA desde ${company.situationSince}.`,
     features: [
-      "Situação: ATIVA",
+      "Situação: INAPTA",
       `Desde ${company.situationSince}`,
       "Sem situação especial",
       "Dados oficiais resumidos",

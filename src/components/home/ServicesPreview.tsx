@@ -3,28 +3,29 @@ import { Button } from "@/components/ui/button";
 import {
   Briefcase,
   Calculator,
-  FileCheck,
+  Phone,
   TrendingUp,
   Shield,
   Users,
   ArrowRight,
 } from "lucide-react";
+import { company } from "@/lib/company";
 
 const services = [
   {
     icon: Briefcase,
     title: "Atividade Principal",
-    description: "Comércio varejista especializado de equipamentos e suprimentos de informática.",
+    description: "Cabeleireiros, manicure e pedicure.",
   },
   {
     icon: Calculator,
     title: "Porte da Empresa",
-    description: "Enquadramento como MEI, conforme dados informados da Receita Federal.",
+    description: "Enquadramento como ME (Microempresa), conforme dados da Receita Federal.",
   },
   {
-    icon: FileCheck,
-    title: "Regime Tributário",
-    description: "Optante pelo Simples Nacional desde 27/01/2023.",
+    icon: Phone,
+    title: "Contato",
+    description: `Telefone ${company.phone} e e-mail ${company.email}.`,
   },
   {
     icon: TrendingUp,
@@ -39,7 +40,7 @@ const services = [
   {
     icon: Users,
     title: "Tipo de Unidade",
-    description: "MATRIZ localizada em São Paulo - SP.",
+    description: `MATRIZ localizada em ${company.cityState}.`,
   },
 ];
 

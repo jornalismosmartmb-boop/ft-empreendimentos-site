@@ -3,45 +3,51 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { MapPin, Building2, FileText, CalendarDays, Briefcase, Send } from "lucide-react";
+import { MapPin, Building2, FileText, CalendarDays, Briefcase, Send, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+import { company } from "@/lib/company";
 
 const companyInfo = [
   {
     icon: FileText,
     title: "CNPJ",
-    items: [{ text: "49.370.903/0001-53", href: null }],
+    items: [{ text: company.cnpj }],
   },
   {
     icon: Building2,
-    title: "Razão Social",
-    items: [{ text: "Joao Adenilson Pedrosa de Melo", href: null }],
+    title: "Nome Empresarial",
+    items: [{ text: company.legalName }],
   },
   {
     icon: MapPin,
     title: "Endereço",
     items: [
-      { text: "Avenida Joao Velho do Rego, 731", href: null },
-      { text: "Parque Colonial", href: null },
-      { text: "São Paulo - SP, 03.967-000", href: null },
-      { text: "Brasil", href: null },
+      { text: company.address.street },
+      { text: company.address.district },
+      { text: `${company.address.city} - ${company.address.state}, ${company.address.zip}` },
+      { text: company.address.country },
     ],
   },
   {
     icon: CalendarDays,
     title: "Data de Abertura",
-    items: [{ text: "27/01/2023", href: null }],
+    items: [{ text: company.openingDate }],
   },
   {
     icon: Briefcase,
     title: "Atividade Principal",
-    items: [
-      {
-        text: "Comércio varejista especializado de equipamentos e suprimentos de informática",
-        href: null,
-      },
-    ],
+    items: [{ text: company.mainActivity }],
+  },
+  {
+    icon: Phone,
+    title: "Telefone",
+    items: [{ text: company.phone }],
+  },
+  {
+    icon: Mail,
+    title: "E-mail",
+    items: [{ text: company.email }],
   },
 ];
 
@@ -80,7 +86,7 @@ const Contato = () => {
               Informações Cadastrais
             </h1>
             <p className="text-lg text-primary-foreground/85 leading-relaxed">
-              Consulte os principais dados da Receita Federal da empresa Leletronicos.
+              Consulte os principais dados da Receita Federal da empresa {company.legalName}.
             </p>
           </div>
         </div>
@@ -97,16 +103,18 @@ const Contato = () => {
 
                 <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
                   <p>
-                    A empresa com razão social <strong className="text-foreground">Joao Adenilson Pedrosa de Melo</strong>
-                    utiliza o nome fantasia <strong className="text-foreground">Leletronicos</strong>.
-                  </p>
-                  <p>
-                    O CNPJ é <strong className="text-foreground">49.370.903/0001-53</strong>, com situação cadastral
-                    <strong className="text-foreground"> ATIVA</strong> desde 27/01/2023.
+                    A empresa <strong className="text-foreground">{company.legalName}</strong> está
+                    registrada sob o CNPJ <strong className="text-foreground">{company.cnpj}</strong>,
+                    com situação cadastral
+                    <strong className="text-foreground"> ATIVA</strong> desde {company.situationSince}.
                   </p>
                   <p>
                     A natureza jurídica é <strong className="text-foreground">Empresário (Individual) (213-5)</strong>,
-                    com enquadramento de porte <strong className="text-foreground">MEI</strong> e opção pelo Simples Nacional.
+                    com enquadramento de porte <strong className="text-foreground">{company.sizeLabel}</strong>.
+                  </p>
+                  <p>
+                    A atividade principal é <strong className="text-foreground">cabeleireiros, manicure e pedicure</strong>,
+                    conforme CNAE {company.cnae}, com sede em {company.cityState}.
                   </p>
                 </div>
 
@@ -168,7 +176,7 @@ const Contato = () => {
                       </h3>
                       <div className="space-y-1">
                         {item.items.map((companyItem, idx) => (
-                          <p key={idx} className="text-muted-foreground">
+                          <p key={idx} className="text-muted-foreground break-words">
                             {companyItem.text}
                           </p>
                         ))}

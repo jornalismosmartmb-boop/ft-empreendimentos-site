@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { company } from "@/lib/company";
 
 const features = [
-  "CNPJ 49.370.903/0001-53 ativo na Receita Federal",
-  "Nome fantasia: Leletronicos",
-  "Enquadramento de porte: MEI",
-  "Atividade principal: comércio de informática",
+  `CNPJ ${company.cnpj} ativo na Receita Federal`,
+  `Nome empresarial: ${company.legalName}`,
+  `Enquadramento de porte: ${company.size}`,
+  "Atividade principal: cabeleireiros, manicure e pedicure",
 ];
 
 export function AboutPreview() {
@@ -19,11 +20,12 @@ export function AboutPreview() {
               Quem Somos
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              Dados Oficiais da Leletronicos
+              Dados Oficiais da Empresa
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              A empresa tem razão social <strong className="text-foreground">Joao Adenilson Pedrosa de Melo</strong>,
-              foi aberta em 27/01/2023 e está registrada como Empresário Individual, com sede em São Paulo - SP.
+              A empresa <strong className="text-foreground">{company.legalName}</strong>,
+              foi aberta em {company.openingDate} e está registrada como Empresário Individual,
+              com sede em {company.cityState}.
             </p>
 
             <ul className="space-y-3 mb-8">
@@ -48,13 +50,13 @@ export function AboutPreview() {
               <div className="aspect-[4/3] bg-gradient-hero flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-24 h-24 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-6 shadow-gold">
-                    <span className="text-accent-foreground font-display font-bold text-4xl">LE</span>
+                    <span className="text-accent-foreground font-display font-bold text-4xl">{company.initials}</span>
                   </div>
                   <h3 className="font-display text-2xl font-bold text-primary-foreground mb-2">
-                    Desde 2023
+                    Desde {company.foundingYear}
                   </h3>
                   <p className="text-primary-foreground/80">
-                    Comércio de informática
+                    Cabeleireiros, manicure e pedicure
                   </p>
                 </div>
               </div>

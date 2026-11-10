@@ -9,31 +9,32 @@ import {
   CheckCircle2,
   AlertCircle,
 } from "lucide-react";
+import { company } from "@/lib/company";
 
 const faqs = [
   {
     question: "Qual é o CNPJ da empresa?",
-    answer: "O CNPJ informado é 49.370.903/0001-53.",
+    answer: `O CNPJ informado é ${company.cnpj}.`,
   },
   {
-    question: "Qual é a razão social?",
-    answer: "A razão social é Joao Adenilson Pedrosa de Melo.",
+    question: "Qual é o nome empresarial?",
+    answer: `O nome empresarial é ${company.legalName}.`,
   },
   {
-    question: "Qual é o nome fantasia?",
-    answer: "O nome fantasia informado é Leletronicos.",
+    question: "A empresa tem nome fantasia?",
+    answer: "Não há nome fantasia registrado no cartão CNPJ; a empresa utiliza o nome empresarial.",
   },
   {
     question: "Qual é a situação cadastral?",
-    answer: "A situação cadastral está ATIVA desde 27/01/2023.",
+    answer: `A situação cadastral está ATIVA desde ${company.situationSince}.`,
   },
   {
     question: "Qual é o enquadramento da empresa?",
-    answer: "A empresa está enquadrada como MEI e também consta como optante pelo Simples Nacional desde 27/01/2023.",
+    answer: `A empresa é Empresário (Individual) (213-5), com enquadramento de porte ${company.sizeLabel}.`,
   },
   {
     question: "Onde fica a sede?",
-    answer: "A sede está na Avenida Joao Velho do Rego, 731, Parque Colonial, São Paulo - SP, CEP 03.967-000.",
+    answer: `A sede está na ${company.address.street}, ${company.address.district}, ${company.address.city} - ${company.address.state}, CEP ${company.address.zip}.`,
   },
 ];
 
@@ -41,10 +42,10 @@ const documents = [
   {
     title: "Dados de Registro",
     items: [
-      "CNPJ: 49.370.903/0001-53",
-      "Razão Social: Joao Adenilson Pedrosa de Melo",
-      "Nome Fantasia: Leletronicos",
-      "Data de abertura: 27/01/2023",
+      `CNPJ: ${company.cnpj}`,
+      `Nome Empresarial: ${company.legalName}`,
+      `Data de abertura: ${company.openingDate}`,
+      `Atividade principal: CNAE ${company.cnae}`,
     ],
   },
   {
@@ -53,16 +54,16 @@ const documents = [
       "Natureza Jurídica: Empresário (Individual) (213-5)",
       "Situação: ATIVA",
       "Tipo de unidade: MATRIZ",
-      "Porte: MEI",
+      `Porte: ${company.size}`,
     ],
   },
   {
-    title: "Tributação e Capital",
+    title: "Contato",
     items: [
-      "Capital social: R$ 25.000,00",
-      "Opção pelo MEI: Sim",
-      "Optante pelo Simples: OPTANTE",
-      "Data da opção pelo Simples: 27/01/2023",
+      `Telefone: ${company.phone}`,
+      `E-mail: ${company.email}`,
+      `Cidade: ${company.cityState}`,
+      `CEP: ${company.address.zip}`,
     ],
   },
 ];
@@ -80,7 +81,7 @@ const Informacoes = () => {
               Dados da Receita Federal
             </h1>
             <p className="text-lg text-primary-foreground/85 leading-relaxed">
-              Resumo completo com as informações empresariais enviadas para a Leletronicos.
+              Resumo completo com as informações empresariais de {company.legalName}.
             </p>
           </div>
         </div>
@@ -157,7 +158,7 @@ const Informacoes = () => {
                     Situação Atual
                   </h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    A empresa está ativa, enquadrada como MEI, optante pelo Simples Nacional e sem situação especial disponível.
+                    A empresa está ativa, com enquadramento de porte {company.size} e sem situação especial disponível.
                   </p>
                 </div>
                 <div className="bg-card rounded-xl p-6 border border-border">
@@ -167,12 +168,12 @@ const Informacoes = () => {
                       <span className="text-accent font-semibold">ATIVA</span>
                     </div>
                     <div className="flex justify-between items-center pb-3 border-b border-border">
-                      <span className="font-medium text-foreground">MEI</span>
-                      <span className="text-accent font-semibold">Sim</span>
+                      <span className="font-medium text-foreground">Porte</span>
+                      <span className="text-accent font-semibold">{company.size}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-foreground">Simples Nacional</span>
-                      <span className="text-accent font-semibold">OPTANTE</span>
+                      <span className="font-medium text-foreground">Unidade</span>
+                      <span className="text-accent font-semibold">{company.unitType}</span>
                     </div>
                   </div>
                 </div>

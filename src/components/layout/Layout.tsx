@@ -3,6 +3,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { CookieBanner } from "@/components/legal/CookieBanner";
 import { LegalModal } from "@/components/legal/LegalModal";
+import { company } from "@/lib/company";
 
 interface LayoutProps {
   children: ReactNode;
@@ -20,7 +21,7 @@ export function Layout({ children }: LayoutProps) {
 
       <LegalModal open={privacyOpen} onOpenChange={setPrivacyOpen} title="Política de Privacidade e Cookies">
         <p>
-          A <strong>Joao Adenilson Pedrosa de Melo</strong> observa a Lei Geral de Proteção de Dados (LGPD). Coletamos apenas dados estritamente necessários para atendimento e cumprimento de obrigações legais. Seus dados são tratados com segurança e confidencialidade.
+          A <strong>{company.legalName}</strong> observa a Lei Geral de Proteção de Dados (LGPD). Coletamos apenas dados estritamente necessários para atendimento e cumprimento de obrigações legais. Seus dados são tratados com segurança e confidencialidade.
         </p>
         <h3 className="text-foreground font-semibold text-base">Cookies Essenciais</h3>
         <p>Necessários para o funcionamento básico do site, como preferências de sessão e consentimento de cookies.</p>

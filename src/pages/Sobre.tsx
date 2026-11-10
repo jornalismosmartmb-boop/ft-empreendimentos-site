@@ -2,22 +2,23 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Building2, CalendarDays, FileText, Briefcase, ArrowRight } from "lucide-react";
+import { company } from "@/lib/company";
 
 const values = [
   {
     icon: Building2,
-    title: "Nome Fantasia",
-    description: "Leletronicos.",
+    title: "Nome Empresarial",
+    description: `${company.legalName}.`,
   },
   {
     icon: FileText,
-    title: "Razão Social",
-    description: "Joao Adenilson Pedrosa de Melo.",
+    title: "CNPJ",
+    description: `${company.cnpj}.`,
   },
   {
     icon: CalendarDays,
     title: "Abertura",
-    description: "27/01/2023.",
+    description: `${company.openingDate}.`,
   },
   {
     icon: Briefcase,
@@ -27,9 +28,9 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2023", event: "Abertura da empresa em 27/01/2023" },
-  { year: "2023", event: "Enquadramento como MEI" },
-  { year: "2023", event: "Opção pelo Simples Nacional desde 27/01/2023" },
+  { year: "2024", event: `Abertura da empresa em ${company.openingDate}` },
+  { year: "2024", event: "Registro como Empresário (Individual)" },
+  { year: "2024", event: `Enquadramento de porte ${company.size}` },
   { year: "Atual", event: "Situação cadastral ATIVA" },
 ];
 
@@ -46,7 +47,7 @@ const Sobre = () => {
               Perfil Cadastral
             </h1>
             <p className="text-lg text-primary-foreground/85 leading-relaxed">
-              Conheça os principais dados oficiais da empresa Leletronicos enviados por você.
+              Conheça os principais dados oficiais da empresa {company.legalName}.
             </p>
           </div>
         </div>
@@ -61,16 +62,17 @@ const Sobre = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  A empresa <strong className="text-foreground">Joao Adenilson Pedrosa de Melo</strong> opera com o nome fantasia
-                  <strong className="text-foreground"> Leletronicos</strong> e está registrada sob o CNPJ 49.370.903/0001-53.
+                  A empresa <strong className="text-foreground">{company.legalName}</strong> está
+                  registrada sob o CNPJ <strong className="text-foreground">{company.cnpj}</strong>,
+                  com situação cadastral ATIVA desde {company.situationSince}.
                 </p>
                 <p>
-                  Sua sede está localizada na Avenida Joao Velho do Rego, 731, bairro Parque Colonial,
-                  São Paulo - SP, CEP 03.967-000, Brasil.
+                  Sua sede está localizada na {company.address.street}, bairro {company.address.district},
+                  {" "}{company.address.city} - {company.address.state}, CEP {company.address.zip}, Brasil.
                 </p>
                 <p>
-                  A atividade principal informada é o comércio varejista especializado de equipamentos e suprimentos de informática,
-                  conforme CNAE G-4751-2/01.
+                  A atividade principal informada é <strong className="text-foreground">cabeleireiros, manicure e pedicure</strong>,
+                  conforme CNAE {company.cnae}.
                 </p>
               </div>
             </div>
@@ -78,17 +80,17 @@ const Sobre = () => {
             <div className="relative">
               <div className="bg-gradient-hero rounded-2xl p-8 text-center">
                 <div className="w-24 h-24 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-6 shadow-gold">
-                  <span className="text-accent-foreground font-display font-bold text-4xl">LE</span>
+                  <span className="text-accent-foreground font-display font-bold text-4xl">{company.initials}</span>
                 </div>
                 <h3 className="font-display text-3xl font-bold text-primary-foreground mb-2">
-                  Capital Social
+                  Atividade Principal
                 </h3>
                 <p className="text-primary-foreground/80 text-lg">
-                  R$ 25.000,00
+                  {company.mainActivity}
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="bg-primary-foreground/10 rounded-xl p-4">
-                    <p className="font-display text-2xl font-bold text-accent">MEI</p>
+                    <p className="font-display text-2xl font-bold text-accent">{company.size}</p>
                     <p className="text-sm text-primary-foreground/80">Enquadramento</p>
                   </div>
                   <div className="bg-primary-foreground/10 rounded-xl p-4">

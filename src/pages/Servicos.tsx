@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
   Briefcase,
-  Calculator,
+  Phone,
   FileCheck,
   TrendingUp,
   Shield,
@@ -13,28 +13,29 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import { company } from "@/lib/company";
 
 const services = [
   {
     icon: Briefcase,
     title: "Atividade Principal",
-    description: "Comércio varejista especializado de equipamentos e suprimentos de informática.",
+    description: "Cabeleireiros, manicure e pedicure.",
     features: [
-      "CNAE G-4751-2/01",
-      "Atuação no varejo especializado",
-      "Segmento de informática",
-      "Empresa sediada em São Paulo - SP",
+      `CNAE ${company.cnae}`,
+      "Atuação em serviços de beleza",
+      "Segmento de estética e cuidados pessoais",
+      `Empresa sediada em ${company.cityState}`,
     ],
   },
   {
-    icon: Calculator,
-    title: "Capital Social",
-    description: "Capital social informado de R$ 25.000,00.",
+    icon: Phone,
+    title: "Contato",
+    description: "Telefone e e-mail informados no cadastro oficial.",
     features: [
-      "Valor declarado: R$ 25.000,00",
-      "Cadastro empresarial atualizado",
-      "Informação exibida no resumo oficial",
-      "Baseado nos dados enviados",
+      `Telefone: ${company.phone}`,
+      `E-mail: ${company.email}`,
+      "Canal de atendimento da empresa",
+      "Dados do cartão CNPJ",
     ],
   },
   {
@@ -42,21 +43,21 @@ const services = [
     title: "Dados de Registro",
     description: "CNPJ e data de abertura conforme Receita Federal.",
     features: [
-      "CNPJ 49.370.903/0001-53",
-      "Abertura em 27/01/2023",
-      "Nome fantasia Leletronicos",
-      "Razão social Joao Adenilson Pedrosa de Melo",
+      `CNPJ ${company.cnpj}`,
+      `Abertura em ${company.openingDate}`,
+      `Nome empresarial ${company.legalName}`,
+      "Situação cadastral ATIVA",
     ],
   },
   {
     icon: TrendingUp,
-    title: "Regime Tributário",
-    description: "Optante pelo Simples Nacional desde a abertura.",
+    title: "Porte da Empresa",
+    description: "Empresa classificada como ME (Microempresa).",
     features: [
-      "Optante pelo Simples",
-      "Data de opção: 27/01/2023",
-      "Enquadramento compatível com MEI",
-      "Status tributário informado",
+      `Porte: ${company.size}`,
+      "Empresário Individual",
+      "Natureza jurídica 213-5",
+      "Situação cadastral ATIVA",
     ],
   },
   {
@@ -72,24 +73,24 @@ const services = [
   },
   {
     icon: Users,
-    title: "Enquadramento",
-    description: "Empresa classificada como MEI.",
+    title: "Situação Cadastral",
+    description: `Empresa ATIVA desde ${company.situationSince}.`,
     features: [
-      "Porte: MEI",
-      "Opção pelo MEI: Sim",
-      "Situação cadastral ATIVA",
+      "Situação: ATIVA",
+      `Desde ${company.situationSince}`,
+      "Sem situação especial",
       "Dados oficiais resumidos",
     ],
   },
   {
     icon: Shield,
     title: "Localização",
-    description: "Sede registrada em São Paulo - SP.",
+    description: `Sede registrada em ${company.cityState}.`,
     features: [
-      "Avenida Joao Velho do Rego, 731",
-      "Bairro Parque Colonial",
-      "CEP 03.967-000",
-      "Brasil",
+      company.address.street,
+      `Bairro ${company.address.district}`,
+      `CEP ${company.address.zip}`,
+      `${company.address.city} - ${company.address.state}, Brasil`,
     ],
   },
   {
@@ -97,10 +98,10 @@ const services = [
     title: "Resumo Legal",
     description: "Conjunto de informações cadastrais exibidas na aplicação.",
     features: [
-      "Razão social completa",
-      "Nome fantasia",
+      "Nome empresarial completo",
       "CNPJ e abertura",
-      "Tributação e porte",
+      "Atividade principal e CNAE",
+      "Endereço e contato",
     ],
   },
 ];
@@ -118,7 +119,7 @@ const Servicos = () => {
               Dados Estruturados da Empresa
             </h1>
             <p className="text-lg text-primary-foreground/85 leading-relaxed">
-              Visualize os principais blocos de informação empresarial da Leletronicos.
+              Visualize os principais blocos de informação empresarial de {company.legalName}.
             </p>
           </div>
         </div>

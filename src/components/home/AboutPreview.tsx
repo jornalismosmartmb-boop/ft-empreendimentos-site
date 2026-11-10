@@ -69,7 +69,7 @@ export function AboutPreview() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Situação</p>
-                  <p className="text-sm text-muted-foreground">ATIVA na Receita Federal</p>
+                  <p className="text-sm text-muted-foreground">INAPTA na Receita Federal</p>
                 </div>
               </div>
             </div>

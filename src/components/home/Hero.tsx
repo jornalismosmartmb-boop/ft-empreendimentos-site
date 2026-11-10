@@ -4,7 +4,7 @@ import { ArrowRight, Award, Building2, MapPin, FileText, Shield } from "lucide-r
 import { company } from "@/lib/company";
 
 const highlights = [
-  { icon: Award, text: `Situação ATIVA desde ${company.situationSince}` },
+  { icon: Award, text: `Situação INAPTA desde ${company.situationSince}` },
   { icon: Building2, text: `Empresário Individual • Porte ${company.size}` },
   { icon: MapPin, text: `Matriz em ${company.cityState}` },
   { icon: FileText, text: `CNAE ${company.cnae}` },

@@ -30,7 +30,7 @@ const services = [
   {
     icon: TrendingUp,
     title: "Situação Cadastral",
-    description: "Empresa em situação ATIVA desde a data de abertura.",
+    description: "Situação INAPTA desde 29/06/2026 (omissão de declarações).",
   },
   {
     icon: Shield,

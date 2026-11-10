@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { company } from "@/lib/company";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -22,15 +23,15 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center shadow-elegant group-hover:shadow-gold transition-shadow duration-300">
-              <span className="text-primary-foreground font-display font-bold text-xl">LE</span>
+              <span className="text-primary-foreground font-display font-bold text-xl">{company.initials}</span>
             </div>
             <div className="hidden sm:block">
               <h1 className="font-display font-bold text-lg text-foreground leading-tight">
-                Leletronicos
+                {company.brand}
               </h1>
               <div className="text-xs text-accent font-medium tracking-wide space-y-0.5">
-                <p>Razão Social: Joao Adenilson Pedrosa de Melo</p>
-                <p>MEI • CNPJ 49.370.903/0001-53</p>
+                <p>{company.legalNature} • Porte {company.size}</p>
+                <p>CNPJ {company.cnpj}</p>
               </div>
             </div>
           </Link>
@@ -55,7 +56,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Building2 className="w-4 h-4" />
-              <span>São Paulo • SP</span>
+              <span>Camaçari • BA</span>
             </div>
             <Button asChild variant="gold" size="sm">
               <Link to="/informacoes">Ver Dados</Link>
@@ -73,15 +74,11 @@ export function Header() {
 
         <div className="border-t border-accent/20 bg-gradient-gold/10 py-3">
           <div className="flex flex-col gap-2 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-              Identitè é um produto de João Adenilson Pedrosa de Melo
-            </p>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-              Identité é um produto de João Adenilson Pedrosa de Melo
-            </p>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-              Identite é um produto de João Adenilson Pedrosa de Melo
-            </p>
+            {company.productLines.map((line) => (
+              <p key={line} className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+                {line}
+              </p>
+            ))}
           </div>
         </div>
 

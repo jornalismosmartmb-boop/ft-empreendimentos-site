@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FileText, MapPin, Building2 } from "lucide-react";
+import { FileText, MapPin, Building2, Phone, Mail } from "lucide-react";
 import { LegalModal } from "@/components/legal/LegalModal";
+import { company } from "@/lib/company";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -22,20 +23,20 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">LE</span>
+                <span className="text-accent-foreground font-display font-bold text-xl">{company.initials}</span>
               </div>
               <div>
                 <h3 className="font-display font-bold text-lg leading-tight">
-                  Leletronicos
+                  {company.brand}
                 </h3>
                 <p className="text-xs text-primary-foreground/70 tracking-wide">
-                  Comércio de informática
+                  {company.tagline}
                 </p>
               </div>
             </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Nome fantasia de Joao Adenilson Pedrosa de Melo, empresa MEI ativa desde 27/01/2023,
-              especializada no comércio varejista de equipamentos e suprimentos de informática.
+              Empresa ativa desde {company.openingDate}, especializada em
+              cabeleireiros, manicure e pedicure, com sede em {company.cityState}.
             </p>
           </div>
 
@@ -58,31 +59,39 @@ export function Footer() {
             <h4 className="font-display font-semibold text-lg mb-4">Dados Oficiais</h4>
             <ul className="flex flex-col gap-2 text-sm text-primary-foreground/80">
               <li>Natureza: Empresário Individual (213-5)</li>
-              <li>Situação: ATIVA</li>
-              <li>Porte: MEI</li>
-              <li>Simples: OPTANTE desde 27/01/2023</li>
-              <li>Tipo de unidade: MATRIZ</li>
+              <li>Situação: {company.situation}</li>
+              <li>Porte: {company.size}</li>
+              <li>Abertura: {company.openingDate}</li>
+              <li>Tipo de unidade: {company.unitType}</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Endereço</h4>
+            <h4 className="font-display font-semibold text-lg mb-4">Contato e Endereço</h4>
             <div className="flex flex-col gap-3 text-sm">
               <div className="flex items-start gap-2 text-primary-foreground/80">
                 <FileText className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>CNPJ 49.370.903/0001-53</span>
+                <span>CNPJ {company.cnpj}</span>
               </div>
               <div className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <span>
-                  Avenida Joao Velho do Rego, 731<br />
-                  Parque Colonial<br />
-                  São Paulo - SP, 03.967-000
+                  {company.address.street}<br />
+                  {company.address.district}<br />
+                  {company.address.city} - {company.address.state}, {company.address.zip}
                 </span>
               </div>
               <div className="flex items-start gap-2 text-primary-foreground/80">
+                <Phone className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>{company.phone}</span>
+              </div>
+              <div className="flex items-start gap-2 text-primary-foreground/80">
+                <Mail className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span className="break-all">{company.email}</span>
+              </div>
+              <div className="flex items-start gap-2 text-primary-foreground/80">
                 <Building2 className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Atividade principal: CNAE G-4751-2/01</span>
+                <span>Atividade principal: CNAE {company.cnae}</span>
               </div>
             </div>
           </div>
@@ -112,18 +121,14 @@ export function Footer() {
             <div className="flex flex-col items-center md:items-start gap-2">
               <p>Todos os direitos reservados.</p>
               <div className="flex flex-col gap-1">
-                <p className="text-base font-semibold text-accent">
-                  Identite é um produto de Joao Adenilson Pedrosa de Melo
-                </p>
-                <p className="text-base font-semibold text-accent">
-                  Identité é um produto de Joao Adenilson Pedrosa de Melo
-                </p>
-                <p className="text-base font-semibold text-accent">
-                  Identitè é um produto de Joao Adenilson Pedrosa de Melo
-                </p>
+                {company.productLines.map((line) => (
+                  <p key={line} className="text-base font-semibold text-accent">
+                    {line}
+                  </p>
+                ))}
               </div>
             </div>
-            <p className="text-xs">CNPJ: 49.370.903/0001-53</p>
+            <p className="text-xs">CNPJ: {company.cnpj}</p>
           </div>
         </div>
       </div>
@@ -131,7 +136,7 @@ export function Footer() {
       {/* Modais Legais */}
       <LegalModal open={privacyOpen} onOpenChange={setPrivacyOpen} title="Política de Privacidade e Cookies">
         <p>
-          A <strong>Joao Adenilson Pedrosa de Melo</strong> observa a Lei Geral de Proteção de Dados (LGPD). Coletamos apenas dados estritamente necessários para atendimento e cumprimento de obrigações legais. Seus dados são tratados com segurança e confidencialidade.
+          A <strong>{company.legalName}</strong> observa a Lei Geral de Proteção de Dados (LGPD). Coletamos apenas dados estritamente necessários para atendimento e cumprimento de obrigações legais. Seus dados são tratados com segurança e confidencialidade.
         </p>
         <h3 className="text-foreground font-semibold text-base">Cookies Essenciais</h3>
         <p>

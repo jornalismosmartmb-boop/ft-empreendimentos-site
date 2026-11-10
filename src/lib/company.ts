@@ -1,0 +1,35 @@
+// Dados oficiais da empresa (fonte: Cartão CNPJ da Receita Federal)
+// Centralize aqui qualquer atualização cadastral futura.
+export const company = {
+  brand: "Tassiane Bastos de Sant Ana Santos",
+  initials: "TS",
+  tagline: "Cabeleireiros, manicure e pedicure",
+  legalName: "Tassiane Bastos de Sant Ana Santos",
+  cnpj: "57.501.296/0001-41",
+  openingDate: "30/09/2024",
+  foundingYear: "2024",
+  legalNature: "Empresário (Individual) (213-5)",
+  size: "ME",
+  sizeLabel: "ME (Microempresa)",
+  situation: "ATIVA",
+  situationSince: "30/09/2024",
+  mainActivity: "Cabeleireiros, manicure e pedicure",
+  cnae: "96.02-5-01",
+  unitType: "MATRIZ",
+  address: {
+    street: "Rua Vieira de Melo, S/N",
+    district: "Vila de Abrantes (Abrantes)",
+    city: "Camaçari",
+    state: "BA",
+    zip: "42.827-658",
+    country: "Brasil",
+  },
+  cityState: "Camaçari - BA",
+  phone: "(71) 98257-7846",
+  email: "emaildoedsonlima@gmail.com",
+  productLines: [
+    "Identitè é um produto de Tassiane Bastos de Sant Ana Santos",
+    "Identité é um produto de Tassiane Bastos de Sant Ana Santos",
+    "Identite é um produto de Tassiane Bastos de Sant Ana Santos",
+  ],
+};

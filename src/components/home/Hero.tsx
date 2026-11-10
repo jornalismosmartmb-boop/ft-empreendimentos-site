@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Building2, MapPin, FileText, Shield } from "lucide-react";
+import { company } from "@/lib/company";
 
 const highlights = [
-  { icon: Award, text: "Situação ATIVA desde 27/01/2023" },
-  { icon: Building2, text: "MEI optante pelo Simples Nacional" },
-  { icon: MapPin, text: "Matriz em São Paulo - SP" },
-  { icon: FileText, text: "CNAE G-4751-2/01" },
+  { icon: Award, text: `Situação ATIVA desde ${company.situationSince}` },
+  { icon: Building2, text: `Empresário Individual • Porte ${company.size}` },
+  { icon: MapPin, text: `Matriz em ${company.cityState}` },
+  { icon: FileText, text: `CNAE ${company.cnae}` },
 ];
 
 export function Hero() {
@@ -25,13 +26,13 @@ export function Hero() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up">
-            Leletronicos: <span className="text-accent">equipamentos e suprimentos</span> de informática
+            {company.brand}: <span className="text-accent">cabeleireiros, manicure</span> e pedicure
           </h1>
 
           <p className="text-lg sm:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in-delay-1">
-            Nome fantasia de <strong className="text-accent">Joao Adenilson Pedrosa de Melo</strong>,
-            empresa com CNPJ 49.370.903/0001-53 e atividade principal de comércio varejista
-            especializado de equipamentos e suprimentos de informática.
+            Empresa com CNPJ <strong className="text-accent">{company.cnpj}</strong>,
+            situada em {company.cityState}, com atividade principal de
+            cabeleireiros, manicure e pedicure.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-delay-2">

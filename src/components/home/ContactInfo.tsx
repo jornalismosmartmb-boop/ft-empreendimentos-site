@@ -1,35 +1,41 @@
-import { Building2, FileText, MapPin, Briefcase } from "lucide-react";
+import { Building2, FileText, MapPin, Briefcase, Phone, Mail } from "lucide-react";
+import { company } from "@/lib/company";
 
 const contactItems = [
   {
     icon: FileText,
     title: "CNPJ",
-    items: [{ text: "49.370.903/0001-53", href: null }],
+    items: [{ text: company.cnpj }],
   },
   {
     icon: Building2,
-    title: "Razão Social",
-    items: [{ text: "Joao Adenilson Pedrosa de Melo", href: null }],
+    title: "Nome Empresarial",
+    items: [{ text: company.legalName }],
   },
   {
     icon: MapPin,
     title: "Endereço",
     items: [
-      { text: "Avenida Joao Velho do Rego, 731", href: null },
-      { text: "Parque Colonial", href: null },
-      { text: "São Paulo - SP, 03.967-000", href: null },
-      { text: "Brasil", href: null },
+      { text: company.address.street },
+      { text: company.address.district },
+      { text: `${company.address.city} - ${company.address.state}, ${company.address.zip}` },
+      { text: company.address.country },
     ],
   },
   {
     icon: Briefcase,
     title: "Atividade Principal",
-    items: [
-      {
-        text: "Comércio varejista especializado de equipamentos e suprimentos de informática",
-        href: null,
-      },
-    ],
+    items: [{ text: company.mainActivity }],
+  },
+  {
+    icon: Phone,
+    title: "Telefone",
+    items: [{ text: company.phone }],
+  },
+  {
+    icon: Mail,
+    title: "E-mail",
+    items: [{ text: company.email }],
   },
 ];
 
@@ -45,11 +51,11 @@ export function ContactInfo() {
             Resumo Cadastral da Empresa
           </h2>
           <p className="text-muted-foreground text-lg">
-            Informações principais da empresa Leletronicos com base nos dados enviados.
+            Informações principais da empresa {company.legalName} com base nos dados oficiais.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {contactItems.map((item, index) => (
             <div
               key={index}
@@ -63,7 +69,7 @@ export function ContactInfo() {
               </h3>
               <div className="space-y-1">
                 {item.items.map((contactItem, idx) => (
-                  <p key={idx} className="text-muted-foreground">
+                  <p key={idx} className="text-muted-foreground break-words">
                     {contactItem.text}
                   </p>
                 ))}

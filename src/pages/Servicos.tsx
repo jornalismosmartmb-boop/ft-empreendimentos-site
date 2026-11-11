@@ -22,8 +22,8 @@ const services = [
     description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Transporte municipal de carga",
-      "Exceto produtos perigosos e mudanças",
+      "Fabricação de letras, letreiros e placas",
+      "Impressão de material para uso publicitário",
       `Empresa sediada em ${company.cityState}`,
     ],
   },

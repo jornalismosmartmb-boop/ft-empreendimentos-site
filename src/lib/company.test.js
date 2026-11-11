@@ -1,10 +1,10 @@
 import { describe, expect, test } from "bun:test";
 import { company } from "./company";
 
-describe("Dados do cartão CNPJ de Rangel", () => {
+describe("Dados do cartão CNPJ de Joao Pedro", () => {
   test("identifica a empresa do cartão", () => {
-    expect(company.legalName).toBe("57.499.064 RANGEL ASEVEDO ARAUJO");
-    expect(company.cnpj).toBe("57.499.064/0001-04");
+    expect(company.legalName).toBe("57.494.053 JOAO PEDRO MACARIO ROCHA DA SILVA");
+    expect(company.cnpj).toBe("57.494.053/0001-23");
   });
 
   test("mantém a situação ativa e a data do cartão", () => {
@@ -13,18 +13,18 @@ describe("Dados do cartão CNPJ de Rangel", () => {
     expect(company.openingDate).toBe("30/09/2024");
   });
 
-  test("usa a atividade de transporte municipal do cartão", () => {
-    expect(company.cnae).toBe("49.30-2-01");
-    expect(company.mainActivity).toBe("Transporte rodoviário de carga, exceto produtos perigosos e mudanças, municipal");
+  test("usa a atividade principal do cartão", () => {
+    expect(company.cnae).toBe("32.99-0-04");
+    expect(company.mainActivity).toBe("Fabricação de painéis e letreiros luminosos");
   });
 
   test("usa o endereço completo do cartão", () => {
     expect(company.address).toEqual({
-      street: "Rua Goias, 1031, Casa",
-      district: "Siqueira Campos",
-      city: "Aracaju",
-      state: "SE",
-      zip: "49.075-280",
+      street: "R Salustiano Balbino dos Santos, 84",
+      district: "Centro",
+      city: "Cansanção",
+      state: "BA",
+      zip: "48.840-000",
       country: "Brasil",
     });
   });

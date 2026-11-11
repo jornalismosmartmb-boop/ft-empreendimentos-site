@@ -31,7 +31,7 @@ const milestones = [
   { year: "2024", event: `Abertura da empresa em ${company.openingDate}` },
   { year: "2024", event: "Registro como Empresário (Individual)" },
   { year: "2024", event: `Enquadramento de porte ${company.size}` },
-  { year: "Atual", event: "Situação cadastral INAPTA" },
+  { year: "Atual", event: `Situação cadastral ${company.situation}` },
 ];
 
 const Sobre = () => {
@@ -64,14 +64,14 @@ const Sobre = () => {
                 <p>
                   A empresa <strong className="text-foreground">{company.legalName}</strong> está
                   registrada sob o CNPJ <strong className="text-foreground">{company.cnpj}</strong>,
-                  com situação cadastral INAPTA desde {company.situationSince}.
+                  com situação cadastral {company.situation} desde {company.situationSince}.
                 </p>
                 <p>
                   Sua sede está localizada na {company.address.street}, bairro {company.address.district},
                   {" "}{company.address.city} - {company.address.state}, CEP {company.address.zip}, Brasil.
                 </p>
                 <p>
-                  A atividade principal informada é <strong className="text-foreground">cabeleireiros, manicure e pedicure</strong>,
+                  A atividade principal informada é <strong className="text-foreground">{company.mainActivity}</strong>,
                   conforme CNAE {company.cnae}.
                 </p>
               </div>
@@ -94,7 +94,7 @@ const Sobre = () => {
                     <p className="text-sm text-primary-foreground/80">Enquadramento</p>
                   </div>
                   <div className="bg-primary-foreground/10 rounded-xl p-4">
-                    <p className="font-display text-2xl font-bold text-accent">INAPTA</p>
+                    <p className="font-display text-2xl font-bold text-accent">{company.situation}</p>
                     <p className="text-sm text-primary-foreground/80">Situação</p>
                   </div>
                 </div>

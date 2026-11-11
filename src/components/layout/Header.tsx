@@ -56,7 +56,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Building2 className="w-4 h-4" />
-              <span>Camaçari • BA</span>
+              <span>{company.address.city} • {company.address.state}</span>
             </div>
             <Button asChild variant="gold" size="sm">
               <Link to="/informacoes">Ver Dados</Link>

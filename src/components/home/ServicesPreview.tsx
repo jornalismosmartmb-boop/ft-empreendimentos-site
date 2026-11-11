@@ -15,7 +15,7 @@ const services = [
   {
     icon: Briefcase,
     title: "Atividade Principal",
-    description: "Cabeleireiros, manicure e pedicure.",
+    description: `${company.mainActivity}.`,
   },
   {
     icon: Calculator,
@@ -30,7 +30,7 @@ const services = [
   {
     icon: TrendingUp,
     title: "Situação Cadastral",
-    description: "Situação INAPTA desde 29/06/2026 (omissão de declarações).",
+    description: `Situação ${company.situation} desde ${company.situationSince}.`,
   },
   {
     icon: Shield,

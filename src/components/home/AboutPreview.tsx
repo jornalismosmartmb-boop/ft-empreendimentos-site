@@ -4,10 +4,10 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { company } from "@/lib/company";
 
 const features = [
-  `CNPJ ${company.cnpj} ativo na Receita Federal`,
+  `CNPJ ${company.cnpj} com situação ${company.situation} na Receita Federal`,
   `Nome empresarial: ${company.legalName}`,
   `Enquadramento de porte: ${company.size}`,
-  "Atividade principal: cabeleireiros, manicure e pedicure",
+  `Atividade principal: ${company.mainActivity}`,
 ];
 
 export function AboutPreview() {
@@ -56,7 +56,7 @@ export function AboutPreview() {
                     Desde {company.foundingYear}
                   </h3>
                   <p className="text-primary-foreground/80">
-                    Cabeleireiros, manicure e pedicure
+                    {company.mainActivity}
                   </p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export function AboutPreview() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Situação</p>
-                  <p className="text-sm text-muted-foreground">INAPTA na Receita Federal</p>
+                  <p className="text-sm text-muted-foreground">{company.situation} na Receita Federal</p>
                 </div>
               </div>
             </div>

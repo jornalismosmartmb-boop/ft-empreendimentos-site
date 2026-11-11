@@ -19,11 +19,11 @@ const services = [
   {
     icon: Briefcase,
     title: "Atividade Principal",
-    description: "Cabeleireiros, manicure e pedicure.",
+    description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Atuação em serviços de beleza",
-      "Segmento de estética e cuidados pessoais",
+      "Transporte municipal de carga",
+      "Exceto produtos perigosos e mudanças",
       `Empresa sediada em ${company.cityState}`,
     ],
   },
@@ -46,7 +46,7 @@ const services = [
       `CNPJ ${company.cnpj}`,
       `Abertura em ${company.openingDate}`,
       `Nome empresarial ${company.legalName}`,
-      "Situação cadastral INAPTA",
+      `Situação cadastral ${company.situation}`,
     ],
   },
   {
@@ -57,7 +57,7 @@ const services = [
       `Porte: ${company.size}`,
       "Empresário Individual",
       "Natureza jurídica 213-5",
-      "Situação cadastral INAPTA",
+      `Situação cadastral ${company.situation}`,
     ],
   },
   {
@@ -74,9 +74,9 @@ const services = [
   {
     icon: Users,
     title: "Situação Cadastral",
-    description: `Empresa INAPTA desde ${company.situationSince}.`,
+    description: `Empresa ${company.situation} desde ${company.situationSince}.`,
     features: [
-      "Situação: INAPTA",
+      `Situação: ${company.situation}`,
       `Desde ${company.situationSince}`,
       "Sem situação especial",
       "Dados oficiais resumidos",

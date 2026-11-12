@@ -22,8 +22,8 @@ const services = [
     description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Fabricação de letras, letreiros e placas",
-      "Impressão de material para uso publicitário",
+      "Manutenção e reparação de máquinas e equipamentos",
+      "Instalação e manutenção elétrica",
       `Empresa sediada em ${company.cityState}`,
     ],
   },
@@ -55,8 +55,8 @@ const services = [
     description: "Empresa classificada como ME (Microempresa).",
     features: [
       `Porte: ${company.size}`,
-      "Empresário Individual",
-      "Natureza jurídica 213-5",
+      "Sociedade Empresária Limitada",
+      "Natureza jurídica 206-2",
       `Situação cadastral ${company.situation}`,
     ],
   },
@@ -66,8 +66,8 @@ const services = [
     description: "Empresa cadastrada como matriz.",
     features: [
       "Tipo de unidade: MATRIZ",
-      "Natureza jurídica 213-5",
-      "Empresário Individual",
+      "Natureza jurídica 206-2",
+      "Sociedade Empresária Limitada",
       "Sem situação especial disponível",
     ],
   },

@@ -24,7 +24,7 @@ export function AboutPreview() {
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               A empresa <strong className="text-foreground">{company.legalName}</strong>,
-              foi aberta em {company.openingDate} e está registrada como Empresário Individual,
+              foi aberta em {company.openingDate} e está registrada como Sociedade Empresária Limitada,
               com sede em {company.cityState}.
             </p>
 

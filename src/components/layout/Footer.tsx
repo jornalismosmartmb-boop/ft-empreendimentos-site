@@ -58,7 +58,7 @@ export function Footer() {
           <div>
             <h4 className="font-display font-semibold text-lg mb-4">Dados Oficiais</h4>
             <ul className="flex flex-col gap-2 text-sm text-primary-foreground/80">
-              <li>Natureza: Sociedade Empresária Limitada (206-2)</li>
+              <li>Natureza: {company.legalNature}</li>
               <li>Situação: {company.situation}</li>
               <li>Porte: {company.size}</li>
               <li>Abertura: {company.openingDate}</li>

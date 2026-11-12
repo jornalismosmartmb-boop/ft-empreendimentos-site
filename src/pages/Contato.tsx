@@ -109,7 +109,7 @@ const Contato = () => {
                     <strong className="text-foreground"> {company.situation}</strong> desde {company.situationSince}.
                   </p>
                   <p>
-                    A natureza jurídica é <strong className="text-foreground">Sociedade Empresária Limitada (206-2)</strong>,
+                    A natureza jurídica é <strong className="text-foreground">{company.legalNature}</strong>,
                     com enquadramento de porte <strong className="text-foreground">{company.sizeLabel}</strong>.
                   </p>
                   <p>

@@ -1,11 +1,11 @@
 // Dados oficiais da empresa (fonte: Cartão CNPJ da Receita Federal)
 // Centralize aqui qualquer atualização cadastral futura.
 export const company = {
-  brand: "Solutec Manutenção LTDA",
-  initials: "SM",
-  tagline: "Instalação de máquinas e equipamentos industriais",
-  legalName: "SOLUTEC MANUTENCOES LTDA",
-  cnpj: "57.499.200/0001-58",
+  brand: "Gustavo Jesus da Silva Costa LTDA",
+  initials: "GC",
+  tagline: "Preparação de documentos e serviços especializados de apoio administrativo",
+  legalName: "GUSTAVO JESUS DA SILVA COSTA LTDA",
+  cnpj: "57.491.662/0001-29",
   openingDate: "30/09/2024",
   foundingYear: "2024",
   legalNature: "Sociedade Empresária Limitada (206-2)",
@@ -13,12 +13,12 @@ export const company = {
   sizeLabel: "ME (Microempresa)",
   situation: "ATIVA",
   situationSince: "30/09/2024",
-  mainActivity: "Instalação de máquinas e equipamentos industriais",
-  cnae: "33.21-0-00",
+  mainActivity: "Preparação de documentos e serviços especializados de apoio administrativo",
+  cnae: "82.19-9-99",
   unitType: "MATRIZ",
   address: {
-    street: "R Capitao Raimundo Borges, 81",
-    district: "Boa Vista",
+    street: "R Barao de Camacari, 644A",
+    district: "Barao de Camacari",
     city: "Catu",
     state: "BA",
     zip: "48.110-000",
@@ -28,8 +28,8 @@ export const company = {
   phone: "(71) 98257-7846",
   email: "emaildoedsonlima@gmail.com",
   productLines: [
-    "Identitè é um produto de SOLUTEC MANUTENCOES LTDA",
-    "Identité é um produto de SOLUTEC MANUTENCOES LTDA",
-    "Identite é um produto de SOLUTEC MANUTENCOES LTDA",
+    "Identitè é um produto de GUSTAVO JESUS DA SILVA COSTA LTDA",
+    "Identité é um produto de GUSTAVO JESUS DA SILVA COSTA LTDA",
+    "Identite é um produto de GUSTAVO JESUS DA SILVA COSTA LTDA",
   ],
 };

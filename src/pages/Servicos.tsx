@@ -22,8 +22,8 @@ const services = [
     description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Manutenção e reparação de máquinas e equipamentos",
-      "Instalação e manutenção elétrica",
+      "Edição de cadastros, listas e outros produtos gráficos",
+      "Reparação e manutenção de computadores e periféricos",
       `Empresa sediada em ${company.cityState}`,
     ],
   },

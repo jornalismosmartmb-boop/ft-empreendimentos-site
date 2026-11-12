@@ -26,7 +26,7 @@ export function Hero() {
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up">
-            {company.brand}: <span className="text-accent">instalação e manutenção industrial</span>
+            {company.brand}: <span className="text-accent">apoio administrativo e documentos</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in-delay-1">

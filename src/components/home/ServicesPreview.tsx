@@ -35,7 +35,7 @@ const services = [
   {
     icon: Shield,
     title: "Natureza Jurídica",
-    description: "Empresário (Individual) sob o código 213-5.",
+    description: "Sociedade Empresária Limitada sob o código 206-2.",
   },
   {
     icon: Users,

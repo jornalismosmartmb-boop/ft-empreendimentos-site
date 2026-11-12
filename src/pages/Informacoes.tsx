@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "Qual é o enquadramento da empresa?",
-    answer: `A empresa é Empresário (Individual) (213-5), com enquadramento de porte ${company.sizeLabel}.`,
+    answer: `A empresa é Sociedade Empresária Limitada (206-2), com enquadramento de porte ${company.sizeLabel}.`,
   },
   {
     question: "Onde fica a sede?",
@@ -51,7 +51,7 @@ const documents = [
   {
     title: "Enquadramento",
     items: [
-      "Natureza Jurídica: Empresário (Individual) (213-5)",
+      "Natureza Jurídica: Sociedade Empresária Limitada (206-2)",
       `Situação: ${company.situation}`,
       "Tipo de unidade: MATRIZ",
       `Porte: ${company.size}`,

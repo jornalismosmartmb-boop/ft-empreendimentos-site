@@ -22,8 +22,7 @@ const services = [
     description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Edição de cadastros, listas e outros produtos gráficos",
-      "Reparação e manutenção de computadores e periféricos",
+      "Restaurantes e similares (CNAE 56.11-2-01)",
       `Empresa sediada em ${company.cityState}`,
     ],
   },
@@ -55,8 +54,8 @@ const services = [
     description: "Empresa classificada como ME (Microempresa).",
     features: [
       `Porte: ${company.size}`,
-      "Sociedade Empresária Limitada",
-      "Natureza jurídica 206-2",
+      company.legalNature,
+      `Natureza jurídica: ${company.legalNature}`,
       `Situação cadastral ${company.situation}`,
     ],
   },
@@ -66,8 +65,8 @@ const services = [
     description: "Empresa cadastrada como matriz.",
     features: [
       "Tipo de unidade: MATRIZ",
-      "Natureza jurídica 206-2",
-      "Sociedade Empresária Limitada",
+      `Natureza jurídica: ${company.legalNature}`,
+      company.legalNature,
       "Sem situação especial disponível",
     ],
   },

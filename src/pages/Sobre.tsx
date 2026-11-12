@@ -23,13 +23,13 @@ const values = [
   {
     icon: Briefcase,
     title: "Natureza Jurídica",
-    description: "Sociedade Empresária Limitada (206-2).",
+    description: `${company.legalNature}.`,
   },
 ];
 
 const milestones = [
   { year: "2024", event: `Abertura da empresa em ${company.openingDate}` },
-  { year: "2024", event: "Registro como Sociedade Empresária Limitada" },
+  { year: "2024", event: `Registro como ${company.legalNature}` },
   { year: "2024", event: `Enquadramento de porte ${company.size}` },
   { year: "Atual", event: `Situação cadastral ${company.situation}` },
 ];

@@ -35,7 +35,7 @@ const services = [
   {
     icon: Shield,
     title: "Natureza Jurídica",
-    description: "Sociedade Empresária Limitada sob o código 206-2.",
+    description: company.legalNature,
   },
   {
     icon: Users,

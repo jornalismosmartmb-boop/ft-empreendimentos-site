@@ -22,7 +22,8 @@ const services = [
     description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Atividades secundárias: não informadas no cartão CNPJ",
+      "Instalação, manutenção e reparação de acessórios automotivos (CNAE 45.20-0-07)",
+      "Manutenção e reparação mecânica de veículos (CNAE 45.20-0-01)",
       `Empresa sediada em ${company.cityState}`,
     ],
   },

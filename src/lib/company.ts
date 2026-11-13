@@ -1,11 +1,11 @@
 // Dados oficiais da empresa (fonte: Cartão CNPJ da Receita Federal)
 // Centralize aqui qualquer atualização cadastral futura.
 export const company = {
-  brand: "Bruno Luiz da Conceicao Brasil",
-  initials: "BC",
-  tagline: "Fabricação de artigos de vidro",
-  legalName: "57.483.727 BRUNO LUIZ DA CONCEICAO BRASIL",
-  cnpj: "57.483.727/0001-94",
+  brand: "Gabriel Goncalves Pascoal Silva",
+  initials: "GG",
+  tagline: "Comércio a varejo de peças e acessórios novos para veículos automotores",
+  legalName: "57.488.398 GABRIEL GONCALVES PASCOAL SILVA",
+  cnpj: "57.488.398/0001-74",
   openingDate: "30/09/2024",
   foundingYear: "2024",
   legalNature: "Empresário (Individual) (213-5)",
@@ -13,12 +13,12 @@ export const company = {
   sizeLabel: "ME (Microempresa)",
   situation: "ATIVA",
   situationSince: "30/09/2024",
-  mainActivity: "Fabricação de artigos de vidro",
-  cnae: "23.19-2-00",
+  mainActivity: "Comércio a varejo de peças e acessórios novos para veículos automotores",
+  cnae: "45.30-7-03",
   unitType: "MATRIZ",
   address: {
-    street: "R Mario Pinto da Cunha, 113, Box Lote Para Criac",
-    district: "Lauro Passos",
+    street: "Av Getulio Vargas, SN, Galpao",
+    district: "Centro",
     city: "Cruz das Almas",
     state: "BA",
     zip: "44.380-000",
@@ -28,8 +28,8 @@ export const company = {
   phone: "(71) 98257-7846",
   email: "emaildoedsonlima@gmail.com",
   productLines: [
-    "Identitè é um produto de 57.483.727 BRUNO LUIZ DA CONCEICAO BRASIL",
-    "Identité é um produto de 57.483.727 BRUNO LUIZ DA CONCEICAO BRASIL",
-    "Identite é um produto de 57.483.727 BRUNO LUIZ DA CONCEICAO BRASIL",
+    "Identitè é um produto de 57.488.398 GABRIEL GONCALVES PASCOAL SILVA",
+    "Identité é um produto de 57.488.398 GABRIEL GONCALVES PASCOAL SILVA",
+    "Identite é um produto de 57.488.398 GABRIEL GONCALVES PASCOAL SILVA",
   ],
 };

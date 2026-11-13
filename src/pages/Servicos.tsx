@@ -22,7 +22,7 @@ const services = [
     description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Restaurantes e similares (CNAE 56.11-2-01)",
+      "Transporte rodoviário de carga, exceto produtos perigosos e mudanças, municipal (CNAE 49.30-2-01)",
       `Empresa sediada em ${company.cityState}`,
     ],
   },

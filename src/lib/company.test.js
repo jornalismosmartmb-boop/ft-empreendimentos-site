@@ -1,21 +1,21 @@
 import { describe, expect, test } from "bun:test";
 import { company } from "./company";
 
-describe("Dados do cartão CNPJ do Josimario", () => {
+describe("Dados do cartão CNPJ da Daiane", () => {
   test("identifica a empresa do cartão", () => {
-    expect(company.legalName).toBe("57.486.245 JOSIMARIO SANTOS DE SANTA INEZ");
-    expect(company.cnpj).toBe("57.486.245/0001-98");
+    expect(company.legalName).toBe("57.487.428 DAIANE DE SOUZA BRANDAO SANTOS");
+    expect(company.cnpj).toBe("57.487.428/0001-28");
   });
   test("mantém a situação ativa e a data do cartão", () => {
     expect(company.situation).toBe("ATIVA");
     expect(company.situationSince).toBe("30/09/2024");
   });
   test("usa a atividade principal do cartão", () => {
-    expect(company.cnae).toBe("73.19-0-02");
+    expect(company.cnae).toBe("47.89-0-99");
   });
   test("usa o endereço do cartão", () => {
-    expect(company.address.city).toBe("Conceição do Coité");
-    expect(company.address.zip).toBe("48.730-000");
+    expect(company.address.city).toBe("Coração de Maria");
+    expect(company.address.zip).toBe("44.250-000");
   });
 });
 
@@ -24,12 +24,12 @@ describe("Dados do cartão CNPJ do Josimario", () => {
    expect(company.size).toBe("ME");
  });
   test("preserva o endereço completo do cartão", () => {
-    expect(company.address.street).toBe("R Rua Antonio Nunes Gordiano, 430");
-    expect(company.address.district).toBe("Carije");
+    expect(company.address.street).toBe("R Casa, SN, TERREO CASA;CASA CASA;CASA CASA;CASA CASA CASA");
+    expect(company.address.district).toBe("Centro");
    expect(company.address.state).toBe("BA");
  });
  test("usa a atividade e os contatos do cartão", () => {
-    expect(company.mainActivity).toBe("Promoção de vendas");
+    expect(company.mainActivity).toBe("Comércio varejista de outros produtos não especificados anteriormente");
    expect(company.phone).toBe("(71) 98257-7846");
    expect(company.email).toBe("emaildoedsonlima@gmail.com");
    expect(company.openingDate).toBe("30/09/2024");

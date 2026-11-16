@@ -22,7 +22,7 @@ const services = [
     description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Atividades secundárias: não informadas no cartão CNPJ",
+      "Instalação e manutenção elétrica (CNAE 43.21-5-00)", "Reparação e manutenção de computadores e periféricos (CNAE 95.11-8-00)",
       `Empresa sediada em ${company.cityState}`,
     ],
   },

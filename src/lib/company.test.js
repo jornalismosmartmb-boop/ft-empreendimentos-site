@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { company } from "./company";
 
-describe("Dados do cartão CNPJ do Adalberto", () => {
+describe("Dados do cartão CNPJ do Thiago", () => {
   test("identifica a empresa do cartão", () => {
     expect(company.legalName).toBe("57.493.589 THIAGO FERREIRA DE ALMEIDA");
     expect(company.cnpj).toBe("57.493.589/0001-24");

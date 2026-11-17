@@ -22,7 +22,8 @@ const services = [
     description: `${company.mainActivity}.`,
     features: [
       `CNAE ${company.cnae}`,
-      "Atividades secundárias: não informadas no cartão CNPJ",
+      "Comércio varejista de ferragens e ferramentas (CNAE 47.44-0-01)",
+      "Comércio varejista de outros artigos usados (CNAE 47.85-7-99)",
       `Empresa sediada em ${company.cityState}`,
     ],
   },
